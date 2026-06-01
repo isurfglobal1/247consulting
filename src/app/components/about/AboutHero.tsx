@@ -36,7 +36,10 @@ export function AboutHero() {
 					</h1>
 
 					<p className="text-lg md:text-xl text-white/60 font-light leading-relaxed mb-12 max-w-xl">
-						{t('We are the operational backbone of modern workforce ecosystems, architecting scalable human capital infrastructure for rapid market penetration.')}
+						{t(
+							'A Human Resources solutions company providing professional workforce and people management services to help businesses attract, develop, and retain top talent for operational excellence'
+						)}
+						{/* {t('We are the operational backbone of modern workforce ecosystems, architecting scalable human capital infrastructure for rapid market penetration.')} */}
 					</p>
 
 					<div className="flex flex-wrap gap-4">

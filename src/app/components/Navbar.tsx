@@ -157,7 +157,7 @@ export function Navbar() {
 										size={18}
 										className="group-hover:text-white transition-colors duration-300"
 									/>
-									<span>{language === 'EN' ? 'English' : 'አማርኛ'}</span>
+									<span>{language === 'EN' ? 'English' : 'Amharic'}</span>
 								</button>
 
 								{/* Language Dropdown */}

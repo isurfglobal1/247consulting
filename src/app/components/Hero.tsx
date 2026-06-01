@@ -93,16 +93,16 @@ export function Hero() {
 							transition={{ delay: 0.8, duration: 0.8 }}
 							className="absolute top-0 right-[5%] z-20 bg-[#151515]/90 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-[200px]">
 							<div className="text-white/50 text-xs font-medium mb-1 uppercase tracking-wider">{t('Salary')}</div>
-							<div className="text-white text-2xl font-heading font-bold mb-4">$5,400</div>
+							<div className="text-white text-2xl font-heading font-bold mb-4">ብር5,400</div>
 
 							<div className="space-y-3">
 								<div className="flex justify-between items-center text-xs">
 									<span className="text-white/60">{t('Base')}</span>
-									<span className="text-white font-medium">$4,500</span>
+									<span className="text-white font-medium">ብር 4,500</span>
 								</div>
 								<div className="flex justify-between items-center text-xs">
 									<span className="text-white/60">{t('Bonus')}</span>
-									<span className="text-green-400 font-medium">+$900</span>
+									<span className="text-green-400 font-medium">+ብር 900</span>
 								</div>
 							</div>
 						</motion.div>
@@ -116,14 +116,14 @@ export function Hero() {
 							<div className="text-white text-sm font-bold mb-4">{t('Recent Payroll')}</div>
 							<div className="space-y-4">
 								{[
-									{ name: 'Sarah Oken', role: 'Design', amount: '$3,200', color: 'bg-purple-500' },
-									{ name: 'James Carter', role: 'Engineering', amount: '$4,500', color: 'bg-blue-500' },
-									{ name: 'Helen Davies', role: 'Marketing', amount: '$2,900', color: 'bg-orange-500' },
+									{ name: 'Sarah Oken', role: 'Design', amount: 'ብር 3,200', color: 'bg-purple-500' },
+									{ name: 'James Carter', role: 'Engineering', amount: 'ብር 4,500', color: 'bg-blue-500' },
+									{ name: 'Helen Davies', role: 'Marketing', amount: 'ብር 2,900', color: 'bg-orange-500' },
 								].map((item, i) => (
 									<div
 										key={i}
 										className="flex items-center gap-3">
-										<div className={`w-8 h-8 rounded-full ${item.color} flex items-center justify-center text-white text-xs font-bold`}>{item.name.charAt(0)}</div>
+										<div className={`w-8 h-8 rounded-full ብር{item.color} flex items-center justify-center text-white text-xs font-bold`}>{item.name.charAt(0)}</div>
 										<div className="flex-1">
 											<div className="text-white text-sm">{t(item.name)}</div>
 											<div className="text-white/40 text-[10px] uppercase">{t(item.role)}</div>

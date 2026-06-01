@@ -56,7 +56,7 @@ export function Services() {
 								</div>
 								<div className="mt-4 pt-3 border-t border-white/10">
 									<div className="text-white/40 text-[10px] mb-1">{t('Total Regional Disbursed')}</div>
-									<div className="text-white font-bold text-lg">$2.4M</div>
+									<div className="text-white font-bold text-lg">ብር 2.4M</div>
 								</div>
 							</div>
 						</div>
@@ -150,14 +150,14 @@ export function Services() {
 												<div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold">ACC</div>
 												<div className="text-white text-xs font-bold">{t('Accra Hub')}</div>
 											</div>
-											<div className="text-white text-lg font-bold">$4.2M</div>
+											<div className="text-white text-lg font-bold">ብር 4.2M</div>
 										</div>
 										<div className="bg-white/5 p-4 rounded-xl border border-white/5">
 											<div className="flex items-center gap-2 mb-3">
 												<div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-[10px] font-bold">NBO</div>
 												<div className="text-white text-xs font-bold">{t('Nairobi Hub')}</div>
 											</div>
-											<div className="text-white text-lg font-bold">$8.1M</div>
+											<div className="text-white text-lg font-bold">ብር 8.1M</div>
 										</div>
 									</div>
 								</div>
@@ -202,7 +202,7 @@ export function Services() {
 								<div className="flex items-end gap-3 h-32 mb-4">
 									<div className="w-8 bg-purple-500/40 rounded-t-md h-[40%]"></div>
 									<div className="w-8 bg-purple-500 rounded-t-md h-[80%] relative">
-										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold py-1 px-2 rounded">$1.2M</div>
+										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold py-1 px-2 rounded">ብር 1.2M</div>
 									</div>
 									<div className="w-8 bg-purple-500/60 rounded-t-md h-[60%]"></div>
 									<div className="w-8 bg-purple-500/30 rounded-t-md h-[50%]"></div>

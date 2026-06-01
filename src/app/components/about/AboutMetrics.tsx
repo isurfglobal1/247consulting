@@ -8,7 +8,7 @@ export function AboutMetrics() {
 	const metrics = [
 		{ label: t('Enterprise Clients'), value: '450+', desc: t('across 14 active jurisdictions') },
 		{ label: t('Workforce Placements'), value: '12,000+', desc: t('talent orchestrated annually') },
-		{ label: t('Payroll Operations'), value: '$1.2B', desc: t('processed through our architecture') },
+		{ label: t('Payroll Operations'), value: 'ብር 1.2B', desc: t('processed through our architecture') },
 		{ label: t('Talent Success Rate'), value: '98.4%', desc: t('executive & technical retention') },
 	];
 
