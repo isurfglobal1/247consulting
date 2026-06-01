@@ -321,6 +321,118 @@ const EN: Record<string, string> = {
 	'JOIN THE WORKFORCE BUILDING THE FUTURE OF': 'JOIN THE WORKFORCE BUILDING THE FUTURE OF',
 	'ENTERPRISE OPERATIONS.': 'ENTERPRISE OPERATIONS.',
 	'Initiate Application': 'Initiate Application',
+
+	'We are committed to delivering reliable, professional, and people-focused HR solutions tailored to the unique needs of each organization. Our experienced team works closely with clients to streamline HR processes, ensure compliance with employment regulations, and build productive, high-performing workforces. We prioritize integrity, confidentiality, efficiency, and long-term client success.':
+		'We are committed to delivering reliable, professional, and people-focused HR solutions tailored to the unique needs of each organization. Our experienced team works closely with clients to streamline HR processes, ensure compliance with employment regulations, and build productive, high-performing workforces. We prioritize integrity, confidentiality, efficiency, and long-term client success.',
+
+	'System': 'System',
+	'SYS.OP.247 // ACTIVE': 'SYS.OP.247 // ACTIVE',
+	'Scope': 'Scope',
+	'Enterprise Workforce Operations': 'Enterprise Workforce Operations',
+	'WORKFORCE': 'WORKFORCE',
+	'ARCHITECTURE': 'ARCHITECTURE',
+	'We do not provide standard HR services. We engineer, deploy, and manage the human capital infrastructure required for high-growth enterprises to scale without friction.':
+		'We do not provide standard HR services. We engineer, deploy, and manage the human capital infrastructure required for high-growth enterprises to scale without friction.',
+	'Deploy Systems': 'Deploy Systems',
+
+	'The Operational': 'The Operational',
+	'Ecosystem': 'Ecosystem',
+	'Interact with the index below to explore our core enterprise deployments.': 'Interact with the index below to explore our core enterprise deployments.',
+	'Human Resource Outsourcing (HRO)': 'Human Resource Outsourcing (HRO)',
+	'Comprehensive offloading of human capital management, ensuring complete enterprise compliance and operational efficiency across all business functions.':
+		'Comprehensive offloading of human capital management, ensuring complete enterprise compliance and operational efficiency across all business functions.',
+	'Deploy HR Framework': 'Deploy HR Framework',
+	'Recruitment and Talent Acquisition': 'Recruitment and Talent Acquisition',
+	'Precision executive search and strategic talent acquisition. We utilize algorithmic market analysis for exact target identification and candidate matching.':
+		'Precision executive search and strategic talent acquisition. We utilize algorithmic market analysis for exact target identification and candidate matching.',
+	'Initiate Talent Search': 'Initiate Talent Search',
+	'Payroll Management Services': 'Payroll Management Services',
+	'Zero-error multi-currency payroll execution. A seamless financial shield guaranteeing absolute reliability, tax compliance, and timely employee compensation.':
+		'Zero-error multi-currency payroll execution. A seamless financial shield guaranteeing absolute reliability, tax compliance, and timely employee compensation.',
+	'Execute Payroll Integration': 'Execute Payroll Integration',
+	'Employee Training and Development': 'Employee Training and Development',
+	'Premium learning frameworks engineered for supreme human performance. Structured programs that enhance skills, boost productivity, and drive corporate innovation.':
+		'Premium learning frameworks engineered for supreme human performance. Structured programs that enhance skills, boost productivity, and drive corporate innovation.',
+	'Initiate Training Engagement': 'Initiate Training Engagement',
+	'Performance Management Support': 'Performance Management Support',
+	'Strategic frameworks for tracking, evaluating, and optimizing employee performance. Data-driven systems that align workforce output with business objectives.':
+		'Strategic frameworks for tracking, evaluating, and optimizing employee performance. Data-driven systems that align workforce output with business objectives.',
+	'Optimize Performance Systems': 'Optimize Performance Systems',
+	'HR Policy Development and Compliance': 'HR Policy Development and Compliance',
+	'Expert guidance on labor laws, regulatory frameworks, and corporate policies. Ensuring your organization operates within legal boundaries while maintaining best practices.':
+		'Expert guidance on labor laws, regulatory frameworks, and corporate policies. Ensuring your organization operates within legal boundaries while maintaining best practices.',
+	'Establish Compliance Framework': 'Establish Compliance Framework',
+	'Workforce Planning and Talent Management': 'Workforce Planning and Talent Management',
+	'Strategic workforce modeling and talent pipeline development. We help you forecast needs, identify skill gaps, and build sustainable talent ecosystems.':
+		'Strategic workforce modeling and talent pipeline development. We help you forecast needs, identify skill gaps, and build sustainable talent ecosystems.',
+	'Plan Workforce Strategy': 'Plan Workforce Strategy',
+	'Employee Relations and Engagement': 'Employee Relations and Engagement',
+	'Creating positive workplace cultures that drive retention and productivity. Proactive conflict resolution, engagement strategies, and employee wellness programs.':
+		'Creating positive workplace cultures that drive retention and productivity. Proactive conflict resolution, engagement strategies, and employee wellness programs.',
+	'Enhance Employee Engagement': 'Enhance Employee Engagement',
+	'HR Advisory and Consulting Services': 'HR Advisory and Consulting Services',
+	'Strategic HR consulting for organizational transformation. Expert guidance on restructuring, change management, and human capital optimization.':
+		'Strategic HR consulting for organizational transformation. Expert guidance on restructuring, change management, and human capital optimization.',
+	'Consult Our Experts': 'Consult Our Experts',
+	'Staffing and Workforce Solutions': 'Staffing and Workforce Solutions',
+	'Flexible staffing models including temporary, contract, and permanent placements. Rapid deployment of qualified professionals across all industries.':
+		'Flexible staffing models including temporary, contract, and permanent placements. Rapid deployment of qualified professionals across all industries.',
+	'Deploy Workforce Solutions': 'Deploy Workforce Solutions',
+	'Visual Data Feed': 'Visual Data Feed',
+
+	'System Advantages': 'System Advantages',
+	'Operational Scalability': 'Operational Scalability',
+	'Our systems expand dynamically. Whether deploying 50 executives or 5,000 field agents, infrastructure adjusts to volume without structural breakage.':
+		'Our systems expand dynamically. Whether deploying 50 executives or 5,000 field agents, infrastructure adjusts to volume without structural breakage.',
+	'Compliance Infrastructure': 'Compliance Infrastructure',
+	'Navigating African labor laws requires precision. We provide a legal and financial shield guaranteeing 100% compliance across all active jurisdictions.':
+		'Navigating African labor laws requires precision. We provide a legal and financial shield guaranteeing 100% compliance across all active jurisdictions.',
+	'AI-Assisted Intelligence': 'AI-Assisted Intelligence',
+	'Predictive algorithms map talent markets, accelerating recruitment velocity while radically improving retention probability across the board.':
+		'Predictive algorithms map talent markets, accelerating recruitment velocity while radically improving retention probability across the board.',
+
+	'Operational Sectors': 'Operational Sectors',
+	'Dominated': 'Dominated',
+	'Cross-industry expertise powering the continents most demanding corporate sectors.':
+		'Cross-industry expertise powering the continents most demanding corporate sectors.',
+	'Banking & Finance': 'Banking & Finance',
+	'Technology': 'Technology',
+	'Retail & Logistics': 'Retail & Logistics',
+	'Manufacturing': 'Manufacturing',
+	'Active Deployment': 'Active Deployment',
+	'Telecom': 'Telecom',
+	'Healthcare': 'Healthcare',
+	'Government': 'Government',
+	'Oil & Gas': 'Oil & Gas',
+
+	'Execution Protocol': 'Execution Protocol',
+	'The Operational Flow': 'The Operational Flow',
+	'Architecture': 'Architecture',
+	'Consultation & Architecture': 'Consultation & Architecture',
+	'Mapping the operational gaps and designing the human capital infrastructure.': 'Mapping the operational gaps and designing the human capital infrastructure.',
+	'Talent Mapping': 'Talent Mapping',
+	'Algorithmic market analysis and executive target identification.': 'Algorithmic market analysis and executive target identification.',
+	'Verification Protocol': 'Verification Protocol',
+	'Rigorous legal, credential, and behavioral vetting processes.': 'Rigorous legal, credential, and behavioral vetting processes.',
+	'System Deployment': 'System Deployment',
+	'Seamless integration of personnel, payroll, and compliance systems.': 'Seamless integration of personnel, payroll, and compliance systems.',
+	'Workforce Optimization': 'Workforce Optimization',
+	'Continuous performance analytics and structural scaling.': 'Continuous performance analytics and structural scaling.',
+	'Trust Measured': 'Trust Measured',
+	'In Scale': 'In Scale',
+	'True operational power is validated entirely by scale and precision. We support the human infrastructure behind the continents most demanding corporate entities.':
+		'True operational power is validated entirely by scale and precision. We support the human infrastructure behind the continents most demanding corporate entities.',
+	'Payroll Operations Processed': 'Payroll Operations Processed',
+	'Countries Served': 'Countries Served',
+	'Talent Retention Rate': 'Talent Retention Rate',
+	'Avg. Executive Hiring Speed': 'Avg. Executive Hiring Speed',
+
+	'Final Step': 'Final Step',
+	'Build Smarter': 'Build Smarter',
+	'Operations': 'Operations',
+
+	'Global Headquarters: ': 'Global Headquarters: ',
+	'Tel: ': 'Tel: ',
 };
 
 const AM: Record<string, string> = {
@@ -640,6 +752,118 @@ const AM: Record<string, string> = {
 	'JOIN THE WORKFORCE BUILDING THE FUTURE OF': 'የወደፊቱን የሚገነባውን የሰው ኃይል ተቀላቀሉ',
 	'ENTERPRISE OPERATIONS.': 'የድርጅት ሥራዎች።',
 	'Initiate Application': 'ማመልከቻ ጀምር',
+
+	'We are committed to delivering reliable, professional, and people-focused HR solutions tailored to the unique needs of each organization. Our experienced team works closely with clients to streamline HR processes, ensure compliance with employment regulations, and build productive, high-performing workforces. We prioritize integrity, confidentiality, efficiency, and long-term client success.':
+		'ለእያንዳንዱ ድርጅት ልዩ ፍላጎቶች የተዘጋጁ አስተማማኝ፣ ሙያዊ እና በሰዎች ላይ ያተኮሩ የሰው ኃይል መፍትሄዎችን ለማቅረብ ቁርጠኞች ነን። ልምድ ያለው ቡድናችን የሰው ኃይል ሂደቶችን ለማቀላጠፍ፣ የሥራ ህጎችን ማክበርን ለማረጋገጥ እና ውጤታማ፣ ከፍተኛ አፈጻጸም ያላቸውን የሰው ኃይሎች ለመገንባት ከደንበኞች ጋር በቅርበት ይሰራል። ታማኝነትን፣ ሚስጥራዊነትን፣ ብቃትን እና የረዥም ጊዜ የደንበኛ ስኬትን ቅድሚያ እንሰጣለን።',
+
+	'System': 'ሲስተም',
+	'SYS.OP.247 // ACTIVE': 'ሲስተም ኦፕ.247 // ንቁ',
+	'Scope': 'ስፋት',
+	'Enterprise Workforce Operations': 'የድርጅት የሰው ኃይል ሥራዎች',
+	'WORKFORCE': 'የሰው ኃይል',
+	'ARCHITECTURE': 'መዋቅር',
+	'We do not provide standard HR services. We engineer, deploy, and manage the human capital infrastructure required for high-growth enterprises to scale without friction.':
+		'መደበኛ የሰው ኃይል አገልግሎቶችን አንሰጥም። ለከፍተኛ እድገት ድርጅቶች ያለምንም እንቅፋት ለመስፋፋት የሚያስፈልገውን የሰው ካፒታል መሠረተ ልማት እንቀርፃለን፣ እናሰማራለን እንዲሁም እንደራለን።',
+	'Deploy Systems': 'ሲስተሞችን አሰማራ',
+
+	'The Operational': 'የስራ',
+	'Ecosystem': 'ስነ-ምህዳሩ',
+	'Interact with the index below to explore our core enterprise deployments.': 'ዋና የድርጅት ማሰማሪያዎቻችንን ለማሰስ ከታች ካለው መረጃ ጠቋሚ ጋር ይገናኙ።',
+	'Human Resource Outsourcing (HRO)': 'የሰው ኃይል የውጭ አገልግሎት (ኤችአርኦ)',
+	'Comprehensive offloading of human capital management, ensuring complete enterprise compliance and operational efficiency across all business functions.':
+		'አጠቃላይ የሰው ካፒታል አስተዳደር ማስወገድ፣ በሁሉም የንግድ ተግባራት ላይ ሙሉ የድርጅት ተገዢነት እና የስራ ብቃት ማረጋገጥ።',
+	'Deploy HR Framework': 'የሰው ኃይል ማዕቀፍ አሰማራ',
+	'Recruitment and Talent Acquisition': 'ምልመላ እና ተሰጥኦ ግዢ',
+	'Precision executive search and strategic talent acquisition. We utilize algorithmic market analysis for exact target identification and candidate matching.':
+		'ትክክለኛ የሥራ አስፈፃሚ ፍለጋ እና ስትራቴጂካዊ ተሰጥኦ ግዢ። ለትክክለኛ ኢላማ መለየት እና እጩ ማዛመድ አልጎሪዝም የገበያ ትንተና እንጠቀማለን።',
+	'Initiate Talent Search': 'ተሰጥኦ ፍለጋ ጀምር',
+	'Payroll Management Services': 'የደሞዝ ክፍያ አስተዳደር አገልግሎቶች',
+	'Zero-error multi-currency payroll execution. A seamless financial shield guaranteeing absolute reliability, tax compliance, and timely employee compensation.':
+		'ስህተት የሌለው ባለብዙ ምንዛሪ የደሞዝ ክፍያ አፈጻጸም። ፍጹም አስተማማኝነት፣ የግብር ተገዢነት እና ወቅታዊ የሰራተኛ ካሳ የሚያረጋግጥ እንከን የለሽ የፋይናንስ ጋሻ።',
+	'Execute Payroll Integration': 'የደሞዝ ክፍያ ውህደት አከናውን',
+	'Employee Training and Development': 'የሰራተኛ ስልጠና እና ልማት',
+	'Premium learning frameworks engineered for supreme human performance. Structured programs that enhance skills, boost productivity, and drive corporate innovation.':
+		'ለከፍተኛ የሰው አፈጻጸም የተሰሩ ፕሪሚየም የትምህርት ማዕቀፎች። ክህሎቶችን የሚያሳድጉ፣ ምርታማነትን የሚያሳድጉ እና የኮርፖሬት ፈጠራን የሚያንቀሳቅሱ የተዋቀሩ ፕሮግራሞች።',
+	'Initiate Training Engagement': 'የስልጠና ተሳትፎ ጀምር',
+	'Performance Management Support': 'የአፈጻጸም አስተዳደር ድጋፍ',
+	'Strategic frameworks for tracking, evaluating, and optimizing employee performance. Data-driven systems that align workforce output with business objectives.':
+		'የሰራተኛ አፈጻጸም ለመከታተል፣ ለመገምገም እና ለማመቻቸት ስትራቴጂካዊ ማዕቀፎች። የሰው ኃይል ውፅዓት ከንግድ ዓላማዎች ጋር የሚያስማሙ በመረጃ የሚመሩ ሥርዓቶች።',
+	'Optimize Performance Systems': 'የአፈጻጸም ሥርዓቶችን ያሻሽሉ',
+	'HR Policy Development and Compliance': 'የሰው ኃይል ፖሊሲ ልማት እና ተገዢነት',
+	'Expert guidance on labor laws, regulatory frameworks, and corporate policies. Ensuring your organization operates within legal boundaries while maintaining best practices.':
+		'በሠራተኛ ህጎች፣ የቁጥጥር ማዕቀፎች እና የኮርፖሬት ፖሊሲዎች ላይ የባለሙያ መመሪያ። ድርጅትዎ ምርጥ ተግባራትን በመጠበቅ በህጋዊ ድንበሮች ውስጥ እንዲሰራ ማረጋገጥ።',
+	'Establish Compliance Framework': 'ተገዢነት ማዕቀፍ ይመስርቱ',
+	'Workforce Planning and Talent Management': 'የሰው ኃይል እቅድ እና ተሰጥኦ አስተዳደር',
+	'Strategic workforce modeling and talent pipeline development. We help you forecast needs, identify skill gaps, and build sustainable talent ecosystems.':
+		'ስትራቴጂካዊ የሰው ኃይል ሞዴሊንግ እና የተሰጥኦ ቧንቧ መስመር ልማት። ፍላጎቶችን ለመተንበይ፣ የክህሎት ክፍተቶችን ለመለየት እና ዘላቂ የተሰጥኦ ስነ-ምህዳሮችን ለመገንባት እንረዳዎታለን።',
+	'Plan Workforce Strategy': 'የሰው ኃይል ስትራቴጂ ያቅዱ',
+	'Employee Relations and Engagement': 'የሰራተኛ ግንኙነት እና ተሳትፎ',
+	'Creating positive workplace cultures that drive retention and productivity. Proactive conflict resolution, engagement strategies, and employee wellness programs.':
+		'ማቆየት እና ምርታማነትን የሚያነዱ አወንታዊ የስራ ባህሎችን መፍጠር። ንቁ የግጭት አፈታት፣ የተሳትፎ ስልቶች እና የሰራተኛ ደህንነት ፕሮግራሞች።',
+	'Enhance Employee Engagement': 'የሰራተኛ ተሳትፎ ያሳድጉ',
+	'HR Advisory and Consulting Services': 'የሰው ኃይል አማካሪ እና አማካሪ አገልግሎቶች',
+	'Strategic HR consulting for organizational transformation. Expert guidance on restructuring, change management, and human capital optimization.':
+		'ለድርጅታዊ ለውጥ ስትራቴጂካዊ የሰው ኃይል አማካሪ። በመልሶ ማዋቀር፣ ለውጥ አስተዳደር እና የሰው ካፒታል ማመቻቸት ላይ የባለሙያ መመሪያ።',
+	'Consult Our Experts': 'ባለሙያዎቻችንን ያማክሩ',
+	'Staffing and Workforce Solutions': 'የሰራተኛ እና የሰው ኃይል መፍትሄዎች',
+	'Flexible staffing models including temporary, contract, and permanent placements. Rapid deployment of qualified professionals across all industries.':
+		'ጊዜያዊ፣ ኮንትራት እና ቋሚ ምደባዎችን ጨምሮ ተለዋዋጭ የሰራተኛ ሞዴሎች። በሁሉም ኢንዱስትሪዎች ውስጥ ብቁ ባለሙያዎችን በፍጥነት ማሰማራት።',
+	'Deploy Workforce Solutions': 'የሰው ኃይል መፍትሄዎች አሰማራ',
+	'Visual Data Feed': 'የእይታ ውሂብ ምግብ',
+
+	'System Advantages': 'የስርዓት ጥቅሞች',
+	'Operational Scalability': 'የስራ መስፋፋት ችሎታ',
+	'Our systems expand dynamically. Whether deploying 50 executives or 5,000 field agents, infrastructure adjusts to volume without structural breakage.':
+		'የእኛ ስርዓቶች በተለዋዋጭነት ይስፋፋሉ። 50 ሥራ አስፈፃሚዎችን ወይም 5,000 የሜዳ ወኪሎችን በማሰማራት ላይ ይሁን፣ መሠረተ ልማት ያለ መዋቅራዊ መሰበር ከመጠን ጋር ይስማማል።',
+	'Compliance Infrastructure': 'ተገዢነት መሠረተ ልማት',
+	'Navigating African labor laws requires precision. We provide a legal and financial shield guaranteeing 100% compliance across all active jurisdictions.':
+		'የአፍሪካ የሠራተኛ ህጎችን ማሰስ ትክክለኛነትን ይጠይቃል። በሁሉም ንቁ የህግ ክልሎች ውስጥ 100% ተገዢነትን የሚያረጋግጥ ህጋዊ እና ፋይናንስ ጋሻ እናቀርባለን።',
+	'AI-Assisted Intelligence': 'ኤአይ የታገዘ እውቀት',
+	'Predictive algorithms map talent markets, accelerating recruitment velocity while radically improving retention probability across the board.':
+		'ትንበያ ስልተ ቀመሮች የተሰጥኦ ገበያዎችን ካርታ ያወጣሉ፣ የምልመላ ፍጥነትን ያፋጥናሉ በተመሳሳይ ጊዜ ደግሞ በሁሉም ደረጃ የማቆየት እድልን በከፍተኛ ደረጃ ያሻሽላሉ።',
+
+	'Operational Sectors': 'የስራ ዘርፎች',
+	'Dominated': 'የተቆጣጠሩት',
+	'Cross-industry expertise powering the continents most demanding corporate sectors.': 'የአህጉሪቱን በጣም ፈላጊ የኮርፖሬት ዘርፎች የሚያጎለብት የተሻገረ የኢንዱስትሪ እውቀት።',
+	'Banking & Finance': 'ባንክ እና ፋይናንስ',
+	'Technology': 'ቴክኖሎጂ',
+	'Retail & Logistics': 'ችርቻሮ እና ሎጅስቲክስ',
+	'Manufacturing': 'ማኑፋክቸሪንግ',
+	'Active Deployment': 'ንቁ ማሰማሪያ',
+	'Telecom': 'ቴሌኮም',
+	'Healthcare': 'ጤና እንክብካቤ',
+	'Government': 'መንግስት',
+	'Oil & Gas': 'ዘይት እና ጋዝ',
+
+	'Execution Protocol': 'የአፈጻጸም ፕሮቶኮል',
+	'The Operational Flow': 'የስራ ፍሰት',
+	'Architecture': 'መዋቅር',
+	'Consultation & Architecture': 'ማማከር እና መዋቅር',
+	'Mapping the operational gaps and designing the human capital infrastructure.': 'የስራ ክፍተቶችን በካርታ መለየት እና የሰው ካፒታል መሠረተ ልማት ዲዛይን ማድረግ።',
+	'Talent Mapping': 'ተሰጥኦ ካርታ',
+	'Algorithmic market analysis and executive target identification.': 'አልጎሪዝም የገበያ ትንተና እና የሥራ አስፈፃሚ ኢላማ መለየት።',
+	'Verification Protocol': 'የማረጋገጫ ፕሮቶኮል',
+	'Rigorous legal, credential, and behavioral vetting processes.': 'ጥብቅ ህጋዊ፣ ማረጋገጫ እና የባህሪ ምርመራ ሂደቶች።',
+	'System Deployment': 'የስርዓት ማሰማራት',
+	'Seamless integration of personnel, payroll, and compliance systems.': 'የሰራተኛ፣ የደሞዝ ክፍያ እና የተገዢነት ስርዓቶች እንከን የለሽ ውህደት።',
+	'Workforce Optimization': 'የሰው ኃይል ማመቻቸት',
+	'Continuous performance analytics and structural scaling.': 'ቀጣይነት ያለው የአፈጻጸም ትንተና እና መዋቅራዊ መስፋፋት።',
+
+	'Trust Measured': 'የታመነ የሚለካው',
+	'In Scale': 'በመጠን ነው',
+	'True operational power is validated entirely by scale and precision. We support the human infrastructure behind the continents most demanding corporate entities.':
+		'እውነተኛ የስራ ኃይል ሙሉ በሙሉ በመጠን እና በትክክለኛነት የሚረጋገጥ ነው። ከአህጉሪቱ በጣም ፈላጊ የኮርፖሬት አካላት ጀርባ ያለውን የሰው መሠረተ ልማት እንደግፋለን።',
+	'Payroll Operations Processed': 'የደሞዝ ክፍያ ስራዎች የተከናወኑ',
+	'Countries Served': 'የተገለገሉ ሀገራት',
+	'Talent Retention Rate': 'የተሰጥኦ ማቆየት መጠን',
+	'Avg. Executive Hiring Speed': 'አማካይ የሥራ አስፈፃሚ ቅጥር ፍጥነት',
+
+	'Final Step': 'የመጨረሻ እርምጃ',
+	'Build Smarter': 'በማሰብ ግንባታ',
+	'Operations': 'ሥራዎች',
+
+	'Global Headquarters: ': 'ዓለም አቀፍ ዋና መሥሪያ ቤት፦ ',
+	'Tel: ': 'ስልክ፦ ',
 };
 
 // Translation store with default values pre-populated

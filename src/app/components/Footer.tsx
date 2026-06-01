@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router';
 
 import { useLanguage } from '../../contexts/LanguageContext';
+import { companyInfo, navLinks, socialIcons } from '../../utils';
 
 export function Footer() {
 	const { t } = useLanguage();
@@ -57,35 +58,44 @@ export function Footer() {
 							to="/"
 							className="flex items-center gap-3 mb-8 group">
 							<div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-2xl group-hover:bg-primary-blue group-hover:text-white transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-								24
+								{companyInfo.logoText}
 							</div>
-							<span className="font-heading font-black text-3xl tracking-tighter text-white">247HR</span>
+							<span className="font-heading font-black text-3xl tracking-tighter text-white">{companyInfo.shortName}</span>
 						</Link>
+						<p className="text-white/40 text-sm leading-relaxed font-light mb-4 max-w-sm">
+							{t('Global Headquarters: ')} {t(companyInfo.address.full)} <br />
+							{t('Tel: ')}
+							{companyInfo.phone}
+						</p>
 						<p className="text-white/40 text-sm leading-relaxed font-light mb-8 max-w-sm">
-							{t('Global Headquarters: Ethiopia.')} <br />
 							{t('Deploying elite workforce infrastructure across emerging enterprise markets.')}
 						</p>
 						<div className="flex gap-4">
-							{[Linkedin, Twitter, Mail].map((Icon, i) => (
-								<a
-									key={i}
-									href="#"
-									className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/[0.05] hover:text-primary-blue transition-all duration-300 hover:-translate-y-1">
-									<Icon size={18} />
-								</a>
-							))}
+							{socialIcons.map((social, i) => {
+								const Icon = social.name === 'LinkedIn' ? Linkedin : social.name === 'Twitter' ? Twitter : Mail;
+								return (
+									<a
+										key={i}
+										href={social.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/[0.05] hover:text-primary-blue transition-all duration-300 hover:-translate-y-1">
+										<Icon size={18} />
+									</a>
+								);
+							})}
 						</div>
 					</div>
 
 					<div className="col-span-1 lg:col-span-2 flex flex-col gap-6">
 						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Intelligence')}</h5>
 						<ul className="space-y-4">
-							{[t('About Board'), t('Leadership'), t('Global Network'), t('ESG Impact')].map((link) => (
-								<li key={link}>
+							{navLinks.intelligence.map((link) => (
+								<li key={link.name}>
 									<Link
-										to={link === t('About Board') ? '/about' : '#'}
+										to={link.path}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{link}
+										{t(link.name)}
 									</Link>
 								</li>
 							))}
@@ -95,12 +105,12 @@ export function Footer() {
 					<div className="col-span-1 lg:col-span-3 flex flex-col gap-6">
 						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Infrastructure')}</h5>
 						<ul className="space-y-4">
-							{[t('Executive Search'), t('Workforce Operations'), t('Talent Analytics'), t('Risk & Compliance')].map((link) => (
-								<li key={link}>
+							{navLinks.infrastructure.map((link) => (
+								<li key={link.name}>
 									<Link
-										to="/services"
+										to={link.path}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{link}
+										{t(link.name)}
 									</Link>
 								</li>
 							))}
@@ -110,12 +120,12 @@ export function Footer() {
 					<div className="col-span-1 lg:col-span-3 flex flex-col gap-6">
 						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Network')}</h5>
 						<ul className="space-y-4">
-							{[t('Open Requisitions'), t('Life at 247HR'), t('Global Locations'), t('Press & Media')].map((link) => (
-								<li key={link}>
+							{navLinks.network.map((link) => (
+								<li key={link.name}>
 									<Link
-										to="/careers"
+										to={link.path}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{link}
+										{t(link.name)}
 									</Link>
 								</li>
 							))}
@@ -125,20 +135,22 @@ export function Footer() {
 
 				{/* Bottom Legal */}
 				<div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-xs font-mono text-white/30 uppercase tracking-widest">
-					<p>{t('© 2026 247HR Consulting PLC.')}</p>
+					<p>
+						{t('© 2026')} {companyInfo.name}.
+					</p>
 					<div className="flex gap-8 mt-4 md:mt-0">
 						<Link
-							to="#"
+							to={companyInfo.legal.privacyProtocol}
 							className="hover:text-white transition-colors">
 							{t('Privacy Protocol')}
 						</Link>
 						<Link
-							to="#"
+							to={companyInfo.legal.termsOfService}
 							className="hover:text-white transition-colors">
 							{t('Terms of Service')}
 						</Link>
 						<Link
-							to="#"
+							to={companyInfo.legal.cookieArchitecture}
 							className="hover:text-white transition-colors">
 							{t('Cookie Architecture')}
 						</Link>
