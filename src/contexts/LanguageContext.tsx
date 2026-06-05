@@ -433,6 +433,29 @@ const EN: Record<string, string> = {
 
 	'Global Headquarters: ': 'Global Headquarters: ',
 	'Tel: ': 'Tel: ',
+
+	'Navigation Error': 'Navigation Error',
+	'Page Not Found': 'Page Not Found',
+	'The page you are looking for does not exist or may have been moved. Please check the URL or return to the homepage.':
+		'The page you are looking for does not exist or may have been moved. Please check the URL or return to the homepage.',
+	'Back to Home': 'Back to Home',
+	'Go Back': 'Go Back',
+	'Quick Navigation': 'Quick Navigation',
+	'Need help?': 'Need help?',
+	'Contact Support': 'Contact Support',
+	'All rights reserved.': 'All rights reserved.',
+
+	'Server Error': 'Server Error',
+	'Application Error': 'Application Error',
+	'Connection Error': 'Connection Error',
+	'Error Occurred': 'Error Occurred',
+	'Something went wrong on our end. Please try again later.': 'Something went wrong on our end. Please try again later.',
+	'An unexpected error occurred. Our team has been notified.': 'An unexpected error occurred. Our team has been notified.',
+	'No Internet Connection': 'No Internet Connection',
+	'Please check your network connection and try again.': 'Please check your network connection and try again.',
+	'Try Again': 'Try Again',
+	'Need assistance?': 'Need assistance?',
+	'Contact our support team': 'Contact our support team',
 };
 
 const AM: Record<string, string> = {
@@ -864,6 +887,29 @@ const AM: Record<string, string> = {
 
 	'Global Headquarters: ': 'ዓለም አቀፍ ዋና መሥሪያ ቤት፦ ',
 	'Tel: ': 'ስልክ፦ ',
+
+	'Navigation Error': 'የአሰሳ ስህተት',
+	'Page Not Found': 'ገጽ አልተገኘም',
+	'The page you are looking for does not exist or may have been moved. Please check the URL or return to the homepage.':
+		'የሚፈልጉት ገጽ የለም ወይም ተንቀሳቅሷል። እባክዎ ዩአርኤሉን ያረጋግጡ ወይም ወደ መነሻ ገጽ ይመለሱ።',
+	'Back to Home': 'ወደ መነሻ ገጽ ተመለስ',
+	'Go Back': 'ተመለስ',
+	'Quick Navigation': 'ፈጣን አሰሳ',
+	'Need help?': 'እርዳታ ያስፈልጋል?',
+	'Contact Support': 'ድጋፍ ያግኙ',
+	'All rights reserved.': 'መብቱ በህግ የተጠበቀ ነው።',
+
+	'Server Error': 'የአገልጋይ ስህተት',
+	'Application Error': 'የመተግበሪያ ስህተት',
+	'Connection Error': 'የግንኙነት ስህተት',
+	'Error Occurred': 'ስህተት ተከስቷል',
+	'Something went wrong on our end. Please try again later.': 'በእኛ በኩል ስህተት ተከስቷል። እባክዎ ቆይተው እንደገና ይሞክሩ።',
+	'An unexpected error occurred. Our team has been notified.': 'ያልተጠበቀ ስህተት ተከስቷል። ቡድናችን ተገኝቷል።',
+	'No Internet Connection': 'የበይነመረብ ግንኙነት የለም',
+	'Please check your network connection and try again.': 'እባክዎ የአውታረ መረብ ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።',
+	'Try Again': 'እንደገና ይሞክሩ',
+	'Need assistance?': 'እርዳታ ያስፈልጋል?',
+	'Contact our support team': 'የድጋፍ ቡድናችንን ያግኙ',
 };
 
 // Translation store with default values pre-populated
