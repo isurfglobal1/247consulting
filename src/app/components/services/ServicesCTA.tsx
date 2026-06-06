@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function ServicesCTA() {
 	const { t } = useLanguage();
@@ -20,18 +20,18 @@ export function ServicesCTA() {
 					viewport={{ once: true }}
 					transition={{ duration: 1, ease: 'easeOut' }}>
 					<div className="inline-block px-4 py-1 border-2 border-primary-black mb-8 text-primary-black font-bold uppercase tracking-widest text-xs">
-						{t('Final Step')}
+						{t('servicesCTA.finalStep')}
 					</div>
 
 					<h2 className="text-primary-black text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[0.9] mb-12 uppercase">
-						{t('Build Smarter')} <br />
-						<span className="text-white">{t('Operations')}</span> <br />
-						{t('With 247HR')}
+						{t('servicesCTA.title1')} <br />
+						<span className="text-white">{t('servicesCTA.title2')}</span> <br />
+						{t('servicesCTA.title3')}
 					</h2>
 
 					<div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
 						<button className="h-[64px] px-12 bg-primary-black text-white font-bold text-lg hover:bg-white hover:text-primary-black transition-colors flex items-center gap-3 group uppercase tracking-wide">
-							{t('Initiate Deployment')}
+							{t('servicesCTA.button')}
 							<ArrowRight
 								size={20}
 								className="group-hover:translate-x-2 transition-transform"

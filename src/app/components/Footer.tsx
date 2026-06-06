@@ -2,12 +2,10 @@ import { ArrowUpRight, Linkedin, Mail, Twitter } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 
-import { useLanguage } from '../../contexts/LanguageContext';
-import { companyInfo, navLinks, socialIcons } from '../../utils';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
 	const { t } = useLanguage();
-
 	return (
 		<footer className="bg-[#0A0A0A] pt-40 pb-12 relative overflow-hidden">
 			{/* Immersive glow */}
@@ -18,14 +16,14 @@ export function Footer() {
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-16 border-b border-white/10 pb-24 mb-24">
 					<div className="lg:col-span-8 flex flex-col">
 						<h2 className="text-4xl md:text-[64px] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
-							{t('THE APEX')} <br />
-							<span className="text-white/30">{t('OF ENTERPRISE HR.')}</span>
+							{t('footer.ctaTitle1')} <br />
+							<span className="text-white/30">{t('footer.ctaTitle2')}</span>
 						</h2>
 						<div className="flex gap-6 mt-4">
 							<Link
 								to="/contact"
 								className="h-[56px] px-8 rounded-full bg-white text-primary-black font-bold tracking-widest uppercase text-sm flex items-center gap-3 hover:bg-primary-blue hover:text-white hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] transition-all duration-500 group">
-								{t('Initiate Dialogue')}{' '}
+								{t('footer.ctaButton')}{' '}
 								<ArrowUpRight
 									size={20}
 									className="group-hover:rotate-45 transition-transform duration-300"
@@ -36,11 +34,11 @@ export function Footer() {
 
 					<div className="lg:col-span-4 flex flex-col justify-end">
 						<div className="flex flex-col gap-4 border-l border-white/10 pl-8">
-							<p className="text-xl font-light text-white/80">{t('Sign up for exclusive intelligence on pan-African workforce architecture.')}</p>
+							<p className="text-xl font-light text-white/80">{t('footer.newsletterText')}</p>
 							<div className="relative mt-4">
 								<input
 									type="email"
-									placeholder={t('Executive Email')}
+									placeholder={t('footer.newsletterPlaceholder')}
 									className="w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-white/30 font-light focus:outline-none focus:border-primary-blue transition-colors pr-12"
 								/>
 								<button className="absolute right-0 top-1/2 -translate-y-1/2 text-white/50 hover:text-primary-blue transition-colors">
@@ -58,44 +56,37 @@ export function Footer() {
 							to="/"
 							className="flex items-center gap-3 mb-8 group">
 							<div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-2xl group-hover:bg-primary-blue group-hover:text-white transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-								{companyInfo.logoText}
+								24
 							</div>
-							<span className="font-heading font-black text-3xl tracking-tighter text-white">{companyInfo.shortName}</span>
+							<span className="font-heading font-black text-3xl tracking-tighter text-white">247HR</span>
 						</Link>
-						<p className="text-white/40 text-sm leading-relaxed font-light mb-4 max-w-sm">
-							{t('Global Headquarters: ')} {t(companyInfo.address.full)} <br />
-							{t('Tel: ')}
-							{companyInfo.phone}
-						</p>
-						<p className="text-white/40 text-sm leading-relaxed font-light mb-8 max-w-sm">
-							{t('Deploying elite workforce infrastructure across emerging enterprise markets.')}
-						</p>
+						<p className="text-white/40 text-sm leading-relaxed font-light mb-8 max-w-sm">{t('footer.hqDescription')}</p>
 						<div className="flex gap-4">
-							{socialIcons.map((social, i) => {
-								const Icon = social.name === 'LinkedIn' ? Linkedin : social.name === 'Twitter' ? Twitter : Mail;
-								return (
-									<a
-										key={i}
-										href={social.url}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/[0.05] hover:text-primary-blue transition-all duration-300 hover:-translate-y-1">
-										<Icon size={18} />
-									</a>
-								);
-							})}
+							{[Linkedin, Twitter, Mail].map((Icon, i) => (
+								<a
+									key={i}
+									href="#"
+									className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/[0.05] hover:text-primary-blue transition-all duration-300 hover:-translate-y-1">
+									<Icon size={18} />
+								</a>
+							))}
 						</div>
 					</div>
 
 					<div className="col-span-1 lg:col-span-2 flex flex-col gap-6">
-						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Intelligence')}</h5>
+						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('footer.intelligenceTitle')}</h5>
 						<ul className="space-y-4">
-							{navLinks.intelligence.map((link) => (
-								<li key={link.name}>
+							{[
+								{ key: 'footer.aboutBoard', link: '/about' },
+								{ key: 'footer.leadership', link: '/about' },
+								{ key: 'footer.globalNetwork', link: '#' },
+								{ key: 'footer.esgImpact', link: '#' },
+							].map((item) => (
+								<li key={item.key}>
 									<Link
-										to={link.path}
+										to={item.link}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{t(link.name)}
+										{t(item.key)}
 									</Link>
 								</li>
 							))}
@@ -103,14 +94,19 @@ export function Footer() {
 					</div>
 
 					<div className="col-span-1 lg:col-span-3 flex flex-col gap-6">
-						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Infrastructure')}</h5>
+						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('footer.infrastructureTitle')}</h5>
 						<ul className="space-y-4">
-							{navLinks.infrastructure.map((link) => (
-								<li key={link.name}>
+							{[
+								{ key: 'footer.executiveSearch', link: '/services' },
+								{ key: 'footer.workforceOperations', link: '/services' },
+								{ key: 'footer.talentAnalytics', link: '/services' },
+								{ key: 'footer.riskCompliance', link: '/services' },
+							].map((item) => (
+								<li key={item.key}>
 									<Link
-										to={link.path}
+										to={item.link}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{t(link.name)}
+										{t(item.key)}
 									</Link>
 								</li>
 							))}
@@ -118,14 +114,19 @@ export function Footer() {
 					</div>
 
 					<div className="col-span-1 lg:col-span-3 flex flex-col gap-6">
-						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('Network')}</h5>
+						<h5 className="font-mono text-xs uppercase tracking-[0.2em] text-white/30">{t('footer.networkTitle')}</h5>
 						<ul className="space-y-4">
-							{navLinks.network.map((link) => (
-								<li key={link.name}>
+							{[
+								{ key: 'footer.openRequisitions', link: '/careers' },
+								{ key: 'footer.lifeAt247hr', link: '/careers' },
+								{ key: 'footer.globalLocations', link: '#' },
+								{ key: 'footer.pressMedia', link: '#' },
+							].map((item) => (
+								<li key={item.key}>
 									<Link
-										to={link.path}
+										to={item.link}
 										className="text-white/60 font-light hover:text-white hover:translate-x-2 inline-block transition-all duration-300">
-										{t(link.name)}
+										{t(item.key)}
 									</Link>
 								</li>
 							))}
@@ -135,24 +136,22 @@ export function Footer() {
 
 				{/* Bottom Legal */}
 				<div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-xs font-mono text-white/30 uppercase tracking-widest">
-					<p>
-						{t('© 2026')} {companyInfo.name}.
-					</p>
+					<p>© 2026 247HR Consulting PLC. {t('footer.rights')}</p>
 					<div className="flex gap-8 mt-4 md:mt-0">
 						<Link
-							to={companyInfo.legal.privacyProtocol}
+							to="#"
 							className="hover:text-white transition-colors">
-							{t('Privacy Protocol')}
+							{t('footer.privacyProtocol')}
 						</Link>
 						<Link
-							to={companyInfo.legal.termsOfService}
+							to="#"
 							className="hover:text-white transition-colors">
-							{t('Terms of Service')}
+							{t('footer.termsOfService')}
 						</Link>
 						<Link
-							to={companyInfo.legal.cookieArchitecture}
+							to="#"
 							className="hover:text-white transition-colors">
-							{t('Cookie Architecture')}
+							{t('footer.cookieArchitecture')}
 						</Link>
 					</div>
 				</div>

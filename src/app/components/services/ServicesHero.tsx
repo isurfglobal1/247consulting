@@ -1,13 +1,13 @@
 import { ArrowDownRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function ServicesHero() {
 	const { t } = useLanguage();
 
 	return (
-		<section className="relative w-full min-h-[95vh] bg-[#F5F7FA] overflow-hidden flex flex-col pt-32">
+		<section className="relative w-full min-h-[100vh] bg-[#F5F7FA] overflow-hidden flex flex-col pt-52 md:pt-40">
 			{/* Structural Brutalist Grid Lines */}
 			<div className="absolute inset-0 pointer-events-none flex justify-center z-0">
 				<div className="w-full max-w-[1440px] h-full grid grid-cols-12 gap-6 px-6 lg:px-12">
@@ -33,12 +33,12 @@ export function ServicesHero() {
 						className="lg:col-span-3 pb-8 lg:pb-0 order-2 lg:order-1">
 						<div className="flex flex-col gap-8">
 							<div>
-								<div className="text-primary-black/40 text-xs font-bold tracking-widest uppercase mb-2">{t('System')}</div>
-								<div className="text-primary-black font-mono text-sm">{t('SYS.OP.247 // ACTIVE')}</div>
+								<div className="text-primary-black/40 text-xs font-bold tracking-widest uppercase mb-2">{t('servicesHero.system')}</div>
+								<div className="text-primary-black font-mono text-sm">{t('servicesHero.sysOp')}</div>
 							</div>
 							<div>
-								<div className="text-primary-black/40 text-xs font-bold tracking-widest uppercase mb-2">{t('Scope')}</div>
-								<div className="text-primary-black font-medium">{t('Enterprise Workforce Operations')}</div>
+								<div className="text-primary-black/40 text-xs font-bold tracking-widest uppercase mb-2">{t('servicesHero.scope')}</div>
+								<div className="text-primary-black font-medium">{t('servicesHero.scopeValue')}</div>
 							</div>
 						</div>
 					</motion.div>
@@ -50,10 +50,10 @@ export function ServicesHero() {
 						transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
 						className="lg:col-span-9 order-1 lg:order-2 mb-12 lg:mb-0">
 						<h1 className="font-heading font-black text-[clamp(3.5rem,8vw,9rem)] leading-[0.85] tracking-tighter text-primary-black uppercase">
-							{t('WORKFORCE')} <br />
+							{t('servicesHero.workforce')} <br />
 							<span className="flex items-center gap-4">
 								<span className="w-16 md:w-32 h-[8px] md:h-[12px] bg-primary-blue mt-4"></span>
-								{t('ARCHITECTURE')}
+								{t('servicesHero.architecture')}
 							</span>
 						</h1>
 					</motion.div>
@@ -65,21 +65,17 @@ export function ServicesHero() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1, delay: 0.6 }}
-						className="lg:col-span-5 lg:col-start-4">
-						<p className="text-xl md:text-2xl text-primary-black/70 font-light leading-relaxed">
-							{t(
-								'We do not provide standard HR services. We engineer, deploy, and manage the human capital infrastructure required for high-growth enterprises to scale without friction.'
-							)}
-						</p>
+						className="lg:col-span-7 lg:col-start-2">
+						<p className="text-xl md:text-2xl text-primary-black/70 font-light leading-relaxed">{t('servicesHero.description')}</p>
 					</motion.div>
 
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1, delay: 0.8 }}
-						className="lg:col-span-4 flex justify-start lg:justify-end items-start">
+						className="lg:col-span-3 flex justify-start lg:justify-end items-start">
 						<button className="group flex items-center justify-between w-full lg:w-auto gap-12 pb-4 border-b-2 border-primary-black text-primary-black hover:text-primary-blue hover:border-primary-blue transition-colors">
-							<span className="font-bold text-lg tracking-wide uppercase">{t('Deploy Systems')}</span>
+							<span className="font-bold text-lg tracking-wide uppercase">{t('servicesHero.deploySystems')}</span>
 							<ArrowDownRight
 								size={24}
 								className="group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"

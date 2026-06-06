@@ -46,7 +46,7 @@ export function ServiceCTAC() {
           <motion.button 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative px-10 py-6 bg-white text-[#0A0A0A] overflow-hidden flex items-center gap-6"
+            className="group relative px-10 py-6 bg-white text-primary-black overflow-hidden flex items-center gap-6"
           >
             {/* Button highlight sweep */}
             <div className="absolute inset-0 bg-primary-blue -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>

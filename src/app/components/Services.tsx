@@ -1,12 +1,11 @@
 import { ArrowRight, ChevronUp, Settings, UserCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function Services() {
 	const { t } = useLanguage();
-
 	return (
 		<section className="relative w-full py-24 bg-[#0A0A0A] overflow-hidden">
 			<div className="container-enterprise relative z-10 space-y-32">
@@ -40,23 +39,23 @@ export function Services() {
 										/>
 									</div>
 									<div>
-										<div className="text-white text-sm font-bold">{t('Marley Aminoff')}</div>
-										<div className="text-white/40 text-[10px] uppercase">{t('Compliance Director')}</div>
+										<div className="text-white text-sm font-bold">Marley Aminoff</div>
+										<div className="text-white/40 text-[10px] uppercase">Compliance Director</div>
 									</div>
 								</div>
 								<div className="space-y-2 text-xs">
 									<div className="flex justify-between">
-										<span className="text-white/60">{t('Active Jurisdictions:')}</span>
+										<span className="text-white/60">Active Jurisdictions:</span>
 										<span className="text-white">14</span>
 									</div>
 									<div className="flex justify-between">
-										<span className="text-white/60">{t('Compliance Audits:')}</span>
+										<span className="text-white/60">Compliance Audits:</span>
 										<span className="text-white">100%</span>
 									</div>
 								</div>
 								<div className="mt-4 pt-3 border-t border-white/10">
-									<div className="text-white/40 text-[10px] mb-1">{t('Total Regional Disbursed')}</div>
-									<div className="text-white font-bold text-lg">ብር 2.4M</div>
+									<div className="text-white/40 text-[10px] mb-1">Total Regional Disbursed</div>
+									<div className="text-white font-bold text-lg">Br2.4M</div>
 								</div>
 							</div>
 						</div>
@@ -69,16 +68,24 @@ export function Services() {
 						transition={{ duration: 0.8 }}
 						className="max-w-md">
 						<h2 className="text-white text-3xl md:text-5xl font-heading font-black tracking-tight mb-6">
-							{t('Payroll')} <br /> {t('Outsourcing')}
+							{t('services.payroll.title', 'Payroll \n Outsourcing')
+								.split('\n')
+								.map((line, i) => (
+									<span key={i}>
+										{line}
+										<br />
+									</span>
+								))}
 						</h2>
 						<p className="text-white/60 text-lg font-body mb-8 leading-relaxed">
 							{t(
+								'services.payroll.desc',
 								'Unify your entire African workforce under a single financial architecture. Automate multi-currency disbursements, localized tax withholdings, and statutory deductions with zero operational friction.'
 							)}
 						</p>
-						<button className="flex items-center gap-2 text-primary-blue font-bold hover:text-white transition-colors">
-							{t('Explore Payroll Infrastructure')} <ArrowRight size={18} />
-						</button>
+						{/* <button className="flex items-center gap-2 text-primary-blue font-bold hover:text-white transition-colors">
+              {t("services.payroll.btn", "Explore Payroll Infrastructure")} <ArrowRight size={18} />
+            </button> */}
 					</motion.div>
 				</div>
 
@@ -91,10 +98,18 @@ export function Services() {
 						transition={{ duration: 0.8 }}
 						className="max-w-md lg:order-1 order-2">
 						<h2 className="text-white text-3xl md:text-5xl font-heading font-black tracking-tight mb-6">
-							{t('Recruitment')} <br /> {t('Staffing')}
+							{t('services.recruitment.title', 'Recruitment \n & Staffing')
+								.split('\n')
+								.map((line, i) => (
+									<span key={i}>
+										{line}
+										<br />
+									</span>
+								))}
 						</h2>
 						<p className="text-white/60 text-lg font-body mb-8 leading-relaxed">
 							{t(
+								'services.recruitment.desc',
 								'Deploy advanced operational frameworks to map capabilities, track executive KPIs, and automate complex onboarding procedures across multiple subsidiaries and time zones.'
 							)}
 						</p>
@@ -104,14 +119,14 @@ export function Services() {
 									size={18}
 									className="text-primary-blue"
 								/>{' '}
-								{t('Predictive modeling')}
+								{t('services.recruitment.feature1', 'Predictive modeling')}
 							</div>
 							<div className="flex items-center gap-2">
 								<Settings
 									size={18}
 									className="text-primary-blue"
 								/>{' '}
-								{t('Automated workflows')}
+								{t('services.recruitment.feature2', 'Automated workflows')}
 							</div>
 						</div>
 					</motion.div>
@@ -138,7 +153,7 @@ export function Services() {
 								{/* Main content mockup */}
 								<div className="flex-1">
 									<div className="flex justify-between items-center mb-6">
-										<div className="text-white text-sm font-bold">{t('Executive Dashboard')}</div>
+										<div className="text-white text-sm font-bold">Executive Dashboard</div>
 										<div className="flex gap-2">
 											<div className="w-16 h-6 rounded bg-white/5"></div>
 											<div className="w-6 h-6 rounded-full bg-white/10"></div>
@@ -148,16 +163,16 @@ export function Services() {
 										<div className="bg-white/5 p-4 rounded-xl border border-white/5">
 											<div className="flex items-center gap-2 mb-3">
 												<div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold">ACC</div>
-												<div className="text-white text-xs font-bold">{t('Accra Hub')}</div>
+												<div className="text-white text-xs font-bold">Accra Hub</div>
 											</div>
-											<div className="text-white text-lg font-bold">ብር 4.2M</div>
+											<div className="text-white text-lg font-bold">Br4.2M</div>
 										</div>
 										<div className="bg-white/5 p-4 rounded-xl border border-white/5">
 											<div className="flex items-center gap-2 mb-3">
 												<div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-[10px] font-bold">NBO</div>
-												<div className="text-white text-xs font-bold">{t('Nairobi Hub')}</div>
+												<div className="text-white text-xs font-bold">Ethiopian Hub</div>
 											</div>
-											<div className="text-white text-lg font-bold">ብር 8.1M</div>
+											<div className="text-white text-lg font-bold">Br8.1M</div>
 										</div>
 									</div>
 								</div>
@@ -180,7 +195,7 @@ export function Services() {
 						<div className="relative z-10 flex gap-6 items-end justify-center">
 							<div className="bg-[#111] p-5 rounded-2xl border border-white/10 shadow-2xl w-[200px] mb-10">
 								<div className="flex justify-between items-center mb-6">
-									<div className="text-white/50 text-xs font-medium">{t('Operational Efficiency')}</div>
+									<div className="text-white/50 text-xs font-medium">Operational Efficiency</div>
 									<div className="text-green-400 text-xs flex items-center">
 										<ChevronUp size={12} /> 94%
 									</div>
@@ -198,11 +213,11 @@ export function Services() {
 							</div>
 
 							<div className="bg-[#151515] p-6 rounded-2xl border border-white/10 shadow-2xl w-[240px] z-20 -ml-10">
-								<div className="text-white text-sm font-bold mb-6">{t('Capital Disbursement')}</div>
+								<div className="text-white text-sm font-bold mb-6">Capital Disbursement</div>
 								<div className="flex items-end gap-3 h-32 mb-4">
 									<div className="w-8 bg-purple-500/40 rounded-t-md h-[40%]"></div>
 									<div className="w-8 bg-purple-500 rounded-t-md h-[80%] relative">
-										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold py-1 px-2 rounded">ብር 1.2M</div>
+										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold py-1 px-2 rounded">Br1.2M</div>
 									</div>
 									<div className="w-8 bg-purple-500/60 rounded-t-md h-[60%]"></div>
 									<div className="w-8 bg-purple-500/30 rounded-t-md h-[50%]"></div>
@@ -218,16 +233,24 @@ export function Services() {
 						transition={{ duration: 0.8 }}
 						className="max-w-md">
 						<h2 className="text-white text-3xl md:text-5xl font-heading font-black tracking-tight mb-6">
-							{t('HR')} <br /> {t('Outsourcing')}
+							{t('services.hr.title', 'HR \n Outsourcing')
+								.split('\n')
+								.map((line, i) => (
+									<span key={i}>
+										{line}
+										<br />
+									</span>
+								))}
 						</h2>
 						<p className="text-white/60 text-lg font-body mb-8 leading-relaxed">
 							{t(
+								'services.hr.desc',
 								'Built for the demands of high-growth African enterprises. Our infrastructure provides the stability and robust API ecosystem required for rapid market penetration.'
 							)}
 						</p>
-						<button className="px-8 py-4 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#F05A28]/90 transition-colors shadow-lg">
-							{t('Initiate Deployment')}
-						</button>
+						{/* <button className="px-8 py-4 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#F05A28]/90 transition-colors shadow-lg">
+							{t('services.hr.btn', 'Initiate Deployment')}
+						</button> */}
 					</motion.div>
 				</div>
 			</div>

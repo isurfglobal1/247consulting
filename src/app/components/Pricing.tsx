@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Check, Sparkles } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const pricingData = [
   {
@@ -53,6 +54,7 @@ const pricingData = [
 ];
 
 export function Pricing() {
+  const { t } = useLanguage();
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
@@ -85,17 +87,17 @@ export function Pricing() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-white text-4xl md:text-6xl font-heading font-black tracking-tighter mb-6">
-              Scalable pricing for <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">modern enterprises</span>
+              {t("pricing.title1")} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">{t("pricing.title2")}</span>
             </h2>
             <p className="text-white/60 text-lg md:text-xl font-body font-light mb-12">
-              Transform your workforce infrastructure with plans designed to scale from growing startups to continental enterprises.
+              {t("pricing.desc")}
             </p>
 
             {/* Premium Toggle */}
             <div className="flex items-center justify-center gap-6">
               <span className={`text-sm md:text-base transition-colors ${!isAnnual ? 'text-white font-medium' : 'text-white/50'}`}>
-                Monthly Billing
+                {t("pricing.monthly")}
               </span>
               
               <button
@@ -110,9 +112,9 @@ export function Pricing() {
               </button>
               
               <span className={`text-sm md:text-base flex items-center gap-3 transition-colors ${isAnnual ? 'text-white font-medium' : 'text-white/50'}`}>
-                Annual Billing
+                {t("pricing.annual")}
                 <span className="bg-primary-blue/10 border border-primary-blue/20 text-primary-blue text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                  Save 20%
+                  {t("pricing.save")}
                 </span>
               </span>
             </div>
@@ -142,7 +144,7 @@ export function Pricing() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
                     <div className="bg-[#1D9BF0] text-white text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-[0_0_20px_rgba(29,155,240,0.4)] flex items-center gap-1.5">
                       <Sparkles size={14} className="animate-pulse" />
-                      Most Popular
+                      {t("pricing.mostPopular", "Most Popular")}
                     </div>
                   </div>
                 )}
@@ -167,7 +169,7 @@ export function Pricing() {
                       <div className="flex items-baseline gap-2">
                         {typeof price === 'number' ? (
                           <>
-                            <span className="text-white text-5xl md:text-6xl font-heading font-black tracking-tighter">${price}</span>
+                            <span className="text-white text-5xl md:text-6xl font-heading font-black tracking-tighter">Br{price}</span>
                             <span className="text-white/40 text-sm font-medium">/mo</span>
                           </>
                         ) : (
@@ -176,7 +178,7 @@ export function Pricing() {
                       </div>
                       <div className="mt-2 text-white/40 text-xs font-medium uppercase tracking-wider h-5">
                         {typeof price === 'number' 
-                          ? (isAnnual ? `Billed annually at $${price * 12}` : 'Billed monthly') 
+                          ? (isAnnual ? `Billed annually at Br${price * 12}` : 'Billed monthly') 
                           : 'Tailored to your needs'
                         }
                       </div>

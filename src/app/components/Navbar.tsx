@@ -1,9 +1,9 @@
-import { ArrowRight, ArrowUpRight, ChevronRight, Globe, Menu, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronRight, Globe, Menu, Moon, Sun, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router';
 
-import { Language, useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const navData = {
@@ -60,28 +60,41 @@ const navData = {
 type NavKeys = keyof typeof navData;
 
 export function Navbar() {
+	const { language, toggleLanguage, t } = useLanguage();
 	const [activeDropdown, setActiveDropdown] = useState<NavKeys | null>(null);
 	const [isMobileOpen, setIsMobileOpen] = useState(false);
-	const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-	const { language, setLanguage, t } = useLanguage();
+	const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 	const location = useLocation();
+
+	useEffect(() => {
+		// Initialize theme from localStorage or default to dark
+		const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+		const currentTheme = savedTheme || 'dark';
+		setTheme(currentTheme);
+		document.documentElement.setAttribute('data-theme', currentTheme);
+	}, []);
+
+	const toggleTheme = () => {
+		const newTheme = theme === 'dark' ? 'light' : 'dark';
+		setTheme(newTheme);
+		localStorage.setItem('theme', newTheme);
+		document.documentElement.setAttribute('data-theme', newTheme);
+	};
 
 	useEffect(() => {
 		setActiveDropdown(null);
 		setIsMobileOpen(false);
-		setIsLanguageDropdownOpen(false);
+	}, [location.pathname]);
+
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'instant', // or 'smooth' if you want animated scrolling
+		});
 	}, [location.pathname]);
 
 	const navItems: NavKeys[] = ['Services', 'Careers', 'About', 'Contact'];
-
-	const handleLanguageChange = (lang: Language) => {
-		setLanguage(lang);
-		setIsLanguageDropdownOpen(false);
-	};
-
-	const renderText = (text: string) => {
-		return t(text);
-	};
 
 	return (
 		<>
@@ -92,12 +105,9 @@ export function Navbar() {
 				className="fixed top-6 left-0 right-0 z-[100] flex justify-center px-6 pointer-events-none">
 				<div
 					className={`w-full max-w-[1200px] bg-[#0A0A0A]/60 backdrop-blur-2xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.4)] pointer-events-auto transition-all duration-500 relative ${
-						activeDropdown || isLanguageDropdownOpen ? 'rounded-t-[24px] rounded-b-none' : 'rounded-[24px]'
+						activeDropdown ? 'rounded-t-[24px] rounded-b-none' : 'rounded-[24px]'
 					}`}
-					onMouseLeave={() => {
-						setActiveDropdown(null);
-						setIsLanguageDropdownOpen(false);
-					}}>
+					onMouseLeave={() => setActiveDropdown(null)}>
 					{/* Main Navbar Bar */}
 					<div className="h-[88px] flex items-center justify-between px-8">
 						<div className="flex items-center gap-2 relative z-20">
@@ -127,7 +137,7 @@ export function Navbar() {
 											className={`relative font-medium tracking-wide text-sm transition-colors duration-300 ${
 												isActive || isCurrentPath ? 'text-white' : 'text-white/70 hover:text-white'
 											}`}>
-											{renderText(item)}
+											{t(`nav.${item.toLowerCase()}`, item)}
 
 											{/* Animated Hover Line */}
 											<span
@@ -146,70 +156,124 @@ export function Navbar() {
 							})}
 						</nav>
 
-						{/* Desktop Actions - Language Toggle Button */}
+						{/* Desktop Actions */}
 						<div className="hidden lg:flex items-center gap-6 relative z-20">
-							<div className="relative">
-								<button
-									onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-									onMouseEnter={() => setIsLanguageDropdownOpen(true)}
-									className="h-[52px] px-8 rounded-[16px] bg-white text-primary-black font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-primary-blue hover:text-white hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] transition-all duration-500 transform hover:-translate-y-1 group">
-									<Globe
-										size={18}
-										className="group-hover:text-white transition-colors duration-300"
-									/>
-									<span>{language === 'EN' ? 'English' : 'Amharic'}</span>
-								</button>
+							<button
+								onClick={toggleTheme}
+								className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+								aria-label="Toggle theme">
+								{theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+							</button>
 
-								{/* Language Dropdown */}
-								<AnimatePresence>
-									{isLanguageDropdownOpen && (
-										<motion.div
-											initial={{ opacity: 0, y: -10, height: 0 }}
-											animate={{ opacity: 1, y: 0, height: 'auto' }}
-											exit={{ opacity: 0, y: -10, height: 0 }}
-											transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-											className="absolute top-[60px] right-0 w-[200px] bg-[#0A0A0A]/95 backdrop-blur-2xl border border-white/10 rounded-[16px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-											onMouseLeave={() => setIsLanguageDropdownOpen(false)}>
-											<div className="py-2">
-												<button
-													onClick={() => handleLanguageChange('EN')}
-													className={`w-full px-4 py-3 text-left transition-colors duration-200 flex items-center gap-3 ${
-														language === 'EN' ? 'text-primary-blue bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'
-													}`}>
-													<span className="font-medium">English</span>
-													{language === 'EN' && (
-														<ChevronRight
-															size={16}
-															className="ml-auto text-primary-blue"
-														/>
-													)}
-												</button>
-												<button
-													onClick={() => handleLanguageChange('AM')}
-													className={`w-full px-4 py-3 text-left transition-colors duration-200 flex items-center gap-3 ${
-														language === 'AM' ? 'text-primary-blue bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'
-													}`}>
-													<span className="font-medium">አማርኛ</span>
-													{language === 'AM' && (
-														<ChevronRight
-															size={16}
-															className="ml-auto text-primary-blue"
-														/>
-													)}
-												</button>
-											</div>
-										</motion.div>
-									)}
-								</AnimatePresence>
-							</div>
+							<button
+								onClick={toggleLanguage}
+								className="flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium text-sm group">
+								{language === 'EN' ? (
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 60 30"
+										width="18"
+										height="12"
+										className="group-hover:scale-110 transition-transform duration-300 rounded-[2px] overflow-hidden">
+										<clipPath id="s">
+											<path d="M0,0 v30 h60 v-30 z" />
+										</clipPath>
+										<clipPath id="t">
+											<path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+										</clipPath>
+										<g clipPath="url(#s)">
+											<path
+												d="M0,0 v30 h60 v-30 z"
+												fill="#012169"
+											/>
+											<path
+												d="M0,0 L60,30 M60,0 L0,30"
+												stroke="#fff"
+												strokeWidth="6"
+											/>
+											<path
+												d="M0,0 L60,30 M60,0 L0,30"
+												clipPath="url(#t)"
+												stroke="#C8102E"
+												strokeWidth="4"
+											/>
+											<path
+												d="M30,0 v30 M0,15 h60"
+												stroke="#fff"
+												strokeWidth="10"
+											/>
+											<path
+												d="M30,0 v30 M0,15 h60"
+												stroke="#C8102E"
+												strokeWidth="6"
+											/>
+										</g>
+									</svg>
+								) : (
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 1200 600"
+										width="18"
+										height="12"
+										className="group-hover:scale-110 transition-transform duration-300 rounded-[2px] overflow-hidden">
+										<rect
+											width="1200"
+											height="200"
+											fill="#078930"
+										/>
+										<rect
+											y="200"
+											width="1200"
+											height="200"
+											fill="#Fcd116"
+										/>
+										<rect
+											y="400"
+											width="1200"
+											height="200"
+											fill="#da121a"
+										/>
+										<circle
+											cx="600"
+											cy="300"
+											r="150"
+											fill="#0f47af"
+										/>
+										<polygon
+											points="600,165 632,260 730,260 651,320 682,415 600,355 518,415 549,320 470,260 568,260"
+											fill="#Fcd116"
+										/>
+										<polygon
+											points="600,200 621,263 686,263 632,305 653,369 600,328 547,369 568,305 514,263 579,263"
+											fill="#0f47af"
+										/>
+									</svg>
+								)}
+								<span>{language}</span>
+							</button>
+
+							<Link
+								to="/contact"
+								className="h-[52px] px-8 rounded-[16px] bg-white text-primary-black font-bold tracking-wide flex items-center justify-center hover:bg-primary-blue hover:text-white hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] transition-all duration-500 transform hover:-translate-y-1">
+								{t('nav.getStarted', 'Get Started')}
+							</Link>
 						</div>
 
-						{/* Mobile Menu Toggle */}
-						<button
-							className="lg:hidden text-white relative z-20"
-							onClick={() => setIsMobileOpen(!isMobileOpen)}>
-							{isMobileOpen ? <X size={28} /> : <Menu size={28} />}
-						</button>
+						{/* Mobile Actions & Menu Toggle */}
+						<div className="lg:hidden flex items-center gap-4 relative z-20">
+							<button
+								onClick={toggleTheme}
+								className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+								aria-label="Toggle theme">
+								{theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+							</button>
+
+							<button
+								className="text-white"
+								onClick={() => setIsMobileOpen(!isMobileOpen)}>
+								{isMobileOpen ? <X size={28} /> : <Menu size={28} />}
+							</button>
+						</div>
 					</div>
 
 					{/* Spatial Dropdown Environment */}
@@ -236,7 +300,7 @@ export function Navbar() {
 												animate={{ opacity: 1, y: 0 }}
 												transition={{ delay: 0.1, duration: 0.4 }}
 												className="text-2xl font-heading font-bold text-white leading-tight">
-												{renderText(navData[activeDropdown].headline)}
+												{t(`nav.${activeDropdown.toLowerCase()}.headline`, navData[activeDropdown].headline)}
 											</motion.h3>
 										</div>
 									</div>
@@ -245,7 +309,7 @@ export function Navbar() {
 									<div className="col-span-7 flex flex-col justify-center py-4 pl-8 border-l border-white/5">
 										<div className="text-white/30 font-mono text-xs uppercase tracking-widest mb-8 flex items-center gap-4">
 											<span className="w-8 h-[1px] bg-white/20" />
-											{renderText('Explore')} {renderText(activeDropdown)}
+											{t('nav.explore')} {t(`nav.${activeDropdown.toLowerCase()}`, activeDropdown)}
 										</div>
 
 										<div className="grid grid-cols-2 gap-x-12 gap-y-6">
@@ -259,7 +323,7 @@ export function Navbar() {
 														to={link.path}
 														className="flex items-center justify-between group/link py-2"
 														onClick={() => setActiveDropdown(null)}>
-														<span className="text-lg font-light text-white/70 group-hover/link:text-white transition-colors duration-300">{renderText(link.label)}</span>
+														<span className="text-lg font-light text-white/70 group-hover/link:text-white transition-colors duration-300">{link.label}</span>
 														<ArrowRight
 															size={16}
 															className="text-primary-blue opacity-0 -translate-x-4 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300"
@@ -278,7 +342,7 @@ export function Navbar() {
 												to={navData[activeDropdown].path}
 												className="inline-flex items-center gap-3 text-primary-blue text-sm font-bold uppercase tracking-widest hover:text-white transition-colors duration-300"
 												onClick={() => setActiveDropdown(null)}>
-												{renderText('View All')} {renderText(activeDropdown)} <ChevronRight size={16} />
+												{t('nav.viewAll')} {t(`nav.${activeDropdown.toLowerCase()}`, activeDropdown)} <ChevronRight size={16} />
 											</Link>
 										</motion.div>
 									</div>
@@ -297,7 +361,7 @@ export function Navbar() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.5 }}
-						className="fixed inset-0 z-[90] bg-[#0A0A0A] flex flex-col pt-32 px-6 pb-12 overflow-y-auto lg:hidden">
+						className="fixed inset-0 z-[90] bg-[#0A0A0A] flex flex-col pt-44 px-6 pb-12 overflow-y-auto lg:hidden">
 						<div className="flex flex-col gap-8">
 							{navItems.map((item, idx) => (
 								<motion.div
@@ -310,7 +374,7 @@ export function Navbar() {
 										to={navData[item].path}
 										onClick={() => setIsMobileOpen(false)}
 										className="text-4xl font-heading font-bold text-white flex items-center justify-between group">
-										{renderText(item)}
+										{t(`nav.${item.toLowerCase()}`, item)}
 										<ArrowUpRight
 											size={28}
 											className="text-white/20 group-hover:text-primary-blue transition-colors"
@@ -318,26 +382,41 @@ export function Navbar() {
 									</Link>
 								</motion.div>
 							))}
+
+							{/* Language Toggle - Mobile */}
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: navItems.length * 0.1, duration: 0.4 }}
+								className="border-b border-white/10 pb-6">
+								<button
+									onClick={() => {
+										toggleLanguage();
+										setIsMobileOpen(false);
+									}}
+									className="text-4xl font-heading font-bold text-white flex items-center justify-between group w-full">
+									<span className="flex items-center gap-4">
+										<Globe
+											size={32}
+											className="text-white/40 group-hover:text-primary-blue transition-colors"
+										/>
+										{language}
+									</span>
+									<ArrowUpRight
+										size={28}
+										className="text-white/20 group-hover:text-primary-blue transition-colors"
+									/>
+								</button>
+							</motion.div>
 						</div>
 
 						<div className="mt-auto pt-12 flex flex-col gap-6">
-							{/* Mobile Language Toggle */}
-							<div className="flex flex-col gap-3">
-								<button
-									onClick={() => handleLanguageChange('EN')}
-									className={`w-full h-[56px] rounded-[16px] font-bold tracking-wide transition-all duration-300 ${
-										language === 'EN' ? 'bg-primary-blue text-white' : 'bg-white/10 text-white/70 hover:bg-white/20'
-									}`}>
-									English
-								</button>
-								<button
-									onClick={() => handleLanguageChange('AM')}
-									className={`w-full h-[56px] rounded-[16px] font-bold tracking-wide transition-all duration-300 ${
-										language === 'AM' ? 'bg-primary-blue text-white' : 'bg-white/10 text-white/70 hover:bg-white/20'
-									}`}>
-									አማርኛ
-								</button>
-							</div>
+							<Link
+								to="/contact"
+								onClick={() => setIsMobileOpen(false)}
+								className="w-full h-[64px] bg-primary-blue text-white rounded-2xl flex items-center justify-center font-bold tracking-widest uppercase text-sm">
+								{t('nav.initiate', 'Initiate Dialogue')}
+							</Link>
 						</div>
 					</motion.div>
 				)}

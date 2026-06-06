@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function CareersCulture() {
@@ -16,27 +16,23 @@ export function CareersCulture() {
 						viewport={{ once: true, margin: '-100px' }}
 						transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
 						className="w-full lg:w-5/12 relative z-10">
-						<div className="text-primary-blue font-mono text-sm tracking-widest uppercase mb-8">{t('Culture // 01')}</div>
+						<div className="text-primary-blue font-mono text-sm tracking-widest uppercase mb-8">{t('careersCulture.sectionTag')}</div>
 
 						<h2 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.1] tracking-tighter mb-8">
-							{t("WE DON'T DO")} <br />
-							<span className="text-white/40">{t('ORDINARY.')}</span>
+							{t('careersCulture.title1')} <br />
+							<span className="text-white/40">{t('careersCulture.title2')}</span>
 						</h2>
 
-						<p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-lg">
-							{t(
-								'Our culture is built for the obsessed. We believe that an elite workforce requires an environment that challenges, elevates, and rigorously supports its people. Here, operational excellence is the baseline.'
-							)}
-						</p>
+						<p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-lg">{t('careersCulture.description')}</p>
 
 						<div className="flex flex-col gap-6 mt-12 border-l border-white/10 pl-6">
 							<div className="flex flex-col">
-								<span className="text-white font-bold text-xl">{t('Radical Accountability')}</span>
-								<span className="text-white/50 text-sm mt-1">{t('Ownership at every layer of the matrix.')}</span>
+								<span className="text-white font-bold text-xl">{t('careersCulture.value1Title')}</span>
+								<span className="text-white/50 text-sm mt-1">{t('careersCulture.value1Desc')}</span>
 							</div>
 							<div className="flex flex-col">
-								<span className="text-white font-bold text-xl">{t('Creative Operations')}</span>
-								<span className="text-white/50 text-sm mt-1">{t('Solving rigid problems with fluid thinking.')}</span>
+								<span className="text-white font-bold text-xl">{t('careersCulture.value2Title')}</span>
+								<span className="text-white/50 text-sm mt-1">{t('careersCulture.value2Desc')}</span>
 							</div>
 						</div>
 					</motion.div>
@@ -62,12 +58,10 @@ export function CareersCulture() {
 							transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
 							className="absolute -bottom-12 -left-12 lg:-left-24 bg-[#0A0A0A] p-8 lg:p-12 border border-white/5 max-w-md shadow-2xl backdrop-blur-md">
 							<div className="text-white/30 font-heading font-black text-6xl leading-none mb-4">"</div>
-							<p className="text-white text-xl md:text-2xl font-light italic leading-relaxed">
-								{t('The most magnetic thing a company can offer is the standard it refuses to compromise on.')}
-							</p>
+							<p className="text-white text-xl md:text-2xl font-light italic leading-relaxed">{t('careersCulture.quote')}</p>
 							<div className="mt-6 flex items-center gap-4">
 								<div className="w-12 h-[1px] bg-primary-blue" />
-								<span className="text-white/60 font-mono text-xs tracking-widest uppercase">{t('CEO Directive')}</span>
+								<span className="text-white/60 font-mono text-xs tracking-widest uppercase">{t('careersCulture.quoteAuthor')}</span>
 							</div>
 						</motion.div>
 					</div>

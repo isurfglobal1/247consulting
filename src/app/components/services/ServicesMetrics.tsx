@@ -1,17 +1,17 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function ServicesMetrics() {
 	const { t } = useLanguage();
 
 	const metrics = [
-		{ value: '450+', label: t('Enterprise Clients') },
-		{ value: '$1.2B', label: t('Payroll Operations Processed') },
-		{ value: '14', label: t('Countries Served') },
-		{ value: '12k+', label: t('Workforce Placements') },
-		{ value: '98%', label: t('Talent Retention Rate') },
-		{ value: '14D', label: t('Avg. Executive Hiring Speed') },
+		{ value: '450+', label: t('servicesMetrics.metric1.label') },
+		{ value: 'Br1.2B', label: t('servicesMetrics.metric2.label') },
+		{ value: '14', label: t('servicesMetrics.metric3.label') },
+		{ value: '12k+', label: t('servicesMetrics.metric4.label') },
+		{ value: '98%', label: t('servicesMetrics.metric5.label') },
+		{ value: '14D', label: t('servicesMetrics.metric6.label') },
 	];
 
 	return (
@@ -25,13 +25,9 @@ export function ServicesMetrics() {
 						transition={{ duration: 0.8 }}
 						className="lg:col-span-5">
 						<h2 className="text-white text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-tighter leading-[1] mb-8">
-							{t('Trust Measured')} <br /> <span className="text-primary-blue">{t('In Scale')}</span>
+							{t('servicesMetrics.title1')} <br /> <span className="text-primary-blue">{t('servicesMetrics.title2')}</span>
 						</h2>
-						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed mb-8">
-							{t(
-								'True operational power is validated entirely by scale and precision. We support the human infrastructure behind the continents most demanding corporate entities.'
-							)}
-						</p>
+						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed mb-8">{t('servicesMetrics.description')}</p>
 					</motion.div>
 
 					<div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">

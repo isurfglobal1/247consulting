@@ -78,7 +78,7 @@ export function JobApplication() {
             <button className="w-full relative overflow-hidden bg-primary-blue text-white py-6 rounded-lg font-bold text-[18px] tracking-wide hover:shadow-[0_0_30px_rgba(29,155,240,0.3)] transition-all duration-300 group">
               <span className="relative z-10">Initiate Candidacy</span>
               <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-[0.16,1,0.3,1]" />
-              <span className="absolute inset-0 z-20 flex items-center justify-center text-[#0A0A0A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">
+              <span className="absolute inset-0 z-20 flex items-center justify-center text-primary-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">
                 Initiate Candidacy
               </span>
             </button>

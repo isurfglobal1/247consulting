@@ -1,12 +1,19 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function CareersProcess() {
 	const { t } = useLanguage();
 
-	const steps = [t('Application'), t('Screening'), t('Interview'), t('Assessment'), t('Offer'), t('Onboarding')];
+	const steps = [
+		t('careersProcess.step1'),
+		t('careersProcess.step2'),
+		t('careersProcess.step3'),
+		t('careersProcess.step4'),
+		t('careersProcess.step5'),
+		t('careersProcess.step6'),
+	];
 
 	return (
 		<section className="relative w-full py-32 bg-[#0A0A0A] overflow-hidden">
@@ -21,7 +28,7 @@ export function CareersProcess() {
 
 			<div className="container-enterprise relative z-10">
 				<div className="text-center mb-24">
-					<h2 className="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">{t('The Path In.')}</h2>
+					<h2 className="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight">{t('careersProcess.title')}</h2>
 				</div>
 
 				<div className="relative max-w-5xl mx-auto">

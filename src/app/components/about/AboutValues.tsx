@@ -1,17 +1,17 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function AboutValues() {
 	const { t } = useLanguage();
 
 	const values = [
-		{ num: '01', title: t('Operational Excellence'), desc: t('Precision in every process, from compliance to payroll execution.') },
-		{ num: '02', title: t('Talent Intelligence'), desc: t('Data-driven recruitment replacing guesswork with strategic acquisition.') },
-		{ num: '03', title: t('Speed'), desc: t('Unmatched velocity in deployment and operational scaling.') },
-		{ num: '04', title: t('Enterprise Reliability'), desc: t('A robust infrastructure that never fails when it matters most.') },
-		{ num: '05', title: t('Workforce Innovation'), desc: t('Constantly pushing the boundaries of human capital technology.') },
-		{ num: '06', title: t('Integrity'), desc: t('Absolute transparency and uncompromising ethical standards.') },
+		{ num: '01', title: t('aboutValues.value1.title'), desc: t('aboutValues.value1.desc') },
+		{ num: '02', title: t('aboutValues.value2.title'), desc: t('aboutValues.value2.desc') },
+		{ num: '03', title: t('aboutValues.value3.title'), desc: t('aboutValues.value3.desc') },
+		{ num: '04', title: t('aboutValues.value4.title'), desc: t('aboutValues.value4.desc') },
+		{ num: '05', title: t('aboutValues.value5.title'), desc: t('aboutValues.value5.desc') },
+		{ num: '06', title: t('aboutValues.value6.title'), desc: t('aboutValues.value6.desc') },
 	];
 
 	return (
@@ -24,11 +24,9 @@ export function AboutValues() {
 					transition={{ duration: 0.8 }}
 					className="mb-20 max-w-2xl">
 					<h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-6">
-						{t('The Code We')} <br /> <span className="text-white/40">{t('Operate By')}</span>
+						{t('aboutValues.title1')} <br /> <span className="text-white/40">{t('aboutValues.title2')}</span>
 					</h2>
-					<p className="text-white/60 text-lg font-light leading-relaxed">
-						{t('Our core values arent posters on a wall; they are the strict operational protocols that govern every deployment, recruitment, and strategy we execute.')}
-					</p>
+					<p className="text-white/60 text-lg font-light leading-relaxed">{t('aboutValues.description')}</p>
 				</motion.div>
 
 				{/* Asymmetrical Grid */}

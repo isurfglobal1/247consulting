@@ -5,7 +5,6 @@ import { AboutValues } from "./components/about/AboutValues";
 import { AboutTeam } from "./components/about/AboutTeam";
 import { AboutMetrics } from "./components/about/AboutMetrics";
 import { AboutCulture } from "./components/about/AboutCulture";
-import { AboutTrust } from "./components/about/AboutTrust";
 import { AboutCTA } from "./components/about/AboutCTA";
 
 export function About() {
@@ -18,7 +17,6 @@ export function About() {
       <AboutTeam />
       <AboutMetrics />
       <AboutCulture />
-      <AboutTrust />
       <AboutCTA />
     </div>
   );

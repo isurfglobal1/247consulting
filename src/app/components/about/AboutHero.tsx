@@ -1,7 +1,8 @@
 import { Activity, ArrowRight, Users } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function AboutHero() {
@@ -26,33 +27,33 @@ export function AboutHero() {
 					className="lg:col-span-7 z-20">
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
 						<span className="w-2 h-2 rounded-full bg-primary-blue animate-pulse"></span>
-						<span className="text-white/80 text-sm font-medium tracking-wide">{t('The Future Operating System')}</span>
+						<span className="text-white/80 text-sm font-medium tracking-wide">{t('aboutHero.tagline')}</span>
 					</div>
 
 					<h1 className="font-heading font-black text-[clamp(2.5rem,5vw,5rem)] leading-[1.05] tracking-tighter text-white mb-8">
-						{t('Powering the')} <br />
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-white">{t('Workforce Behind')}</span> <br />
-						{t("Africa's Leading Enterprises")}
+						{t('aboutHero.title1')} <br />
+						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-white">{t('aboutHero.title2')}</span> <br />
+						{t('aboutHero.title3')}
 					</h1>
 
-					<p className="text-lg md:text-xl text-white/60 font-light leading-relaxed mb-12 max-w-xl">
-						{t(
-							'A Human Resources solutions company providing professional workforce and people management services to help businesses attract, develop, and retain top talent for operational excellence'
-						)}
-						{/* {t('We are the operational backbone of modern workforce ecosystems, architecting scalable human capital infrastructure for rapid market penetration.')} */}
-					</p>
+					<p className="text-lg md:text-xl text-white/60 font-light leading-relaxed mb-12 max-w-xl">{t('aboutHero.description')}</p>
 
 					<div className="flex flex-wrap gap-4">
-						<button className="h-[56px] px-8 rounded-xl bg-white text-primary-black font-bold tracking-wide hover:bg-primary-blue hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] flex items-center gap-2 group">
-							{t('Explore Services')}
+						<Link
+							to="/services"
+							className="h-[56px] px-8 rounded-xl bg-white text-primary-black font-bold tracking-wide hover:bg-primary-blue hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] flex items-center gap-2 group">
+							{t('aboutHero.buttonExplore')}
 							<ArrowRight
 								size={18}
 								className="group-hover:translate-x-1 transition-transform"
 							/>
-						</button>
-						<button className="h-[56px] px-8 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all duration-300 backdrop-blur-md">
-							{t('Work With Us')}
-						</button>
+						</Link>
+
+						<Link
+							to="/contact"
+							className="flex items-center justify-center h-[56px] px-8 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all duration-300 backdrop-blur-md">
+							{t('aboutHero.buttonWorkWithUs')}
+						</Link>
 					</div>
 				</motion.div>
 
@@ -65,7 +66,7 @@ export function AboutHero() {
 					<div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
 						<ImageWithFallback
 							src="https://images.unsplash.com/photo-1631023777074-8a85f27bf67d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBza3lzY3JhcGVyJTIwaW50ZXJpb3IlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzgwMDExMjcyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-							alt="Enterprise Environment"
+							alt={t('aboutHero.imageAlt')}
 							className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
 						/>
 
@@ -87,8 +88,8 @@ export function AboutHero() {
 									/>
 								</div>
 								<div>
-									<div className="text-white text-xs font-bold">{t('Operational Velocity')}</div>
-									<div className="text-green-400 text-[10px]">+24% MoM</div>
+									<div className="text-white text-xs font-bold">{t('aboutHero.metric1Title')}</div>
+									<div className="text-green-400 text-[10px]">{t('aboutHero.metric1Value')}</div>
 								</div>
 							</div>
 							<div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
@@ -109,8 +110,8 @@ export function AboutHero() {
 									/>
 								</div>
 								<div>
-									<div className="text-white text-xs font-bold">{t('Active Deployments')}</div>
-									<div className="text-white/50 text-[10px]">{t('14 Jurisdictions')}</div>
+									<div className="text-white text-xs font-bold">{t('aboutHero.metric2Title')}</div>
+									<div className="text-white/50 text-[10px]">{t('aboutHero.metric2Value')}</div>
 								</div>
 							</div>
 							<div className="flex -space-x-2">
@@ -125,7 +126,9 @@ export function AboutHero() {
 										/>
 									</div>
 								))}
-								<div className="w-8 h-8 rounded-full border-2 border-[#111] bg-white/10 flex items-center justify-center text-[10px] text-white font-medium">+1.2k</div>
+								<div className="w-8 h-8 rounded-full border-2 border-[#111] bg-white/10 flex items-center justify-center text-[10px] text-white font-medium">
+									{t('aboutHero.metric2Extra')}
+								</div>
 							</div>
 						</motion.div>
 					</div>

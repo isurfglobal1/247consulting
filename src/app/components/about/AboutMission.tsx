@@ -1,7 +1,7 @@
 import { Eye, Target } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function AboutMission() {
 	const { t } = useLanguage();
@@ -26,16 +26,12 @@ export function AboutMission() {
 								size={20}
 								className="text-primary-blue"
 							/>
-							{t('Our Mission')}
+							{t('aboutMission.missionLabel')}
 						</div>
 						<h2 className="text-white text-3xl md:text-5xl font-heading font-black tracking-tight mb-8 leading-[1.15]">
-							{t('To engineer the most')} <span className="text-primary-blue">{t('resilient')}</span> {t("human capital systems for Africa's high-growth enterprises.")}
+							{t('aboutMission.missionTitle1')} <span className="text-primary-blue">{t('aboutMission.missionTitle2')}</span> {t('aboutMission.missionTitle3')}
 						</h2>
-						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
-							{t(
-								'We deploy world-class workforce infrastructure that eliminates operational friction, ensuring our clients can focus strictly on market domination while we handle the complexity of talent, compliance, and scale.'
-							)}
-						</p>
+						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">{t('aboutMission.missionDesc')}</p>
 					</motion.div>
 
 					{/* Vision */}
@@ -50,16 +46,12 @@ export function AboutMission() {
 								size={20}
 								className="text-primary-blue"
 							/>
-							{t('Our Vision')}
+							{t('aboutMission.visionLabel')}
 						</div>
 						<h2 className="text-white text-3xl md:text-5xl font-heading font-black tracking-tight mb-8 leading-[1.15]">
-							{t('To become the')} <span className="text-white/40">{t('default operating system')}</span> {t('for continental workforce management.')}
+							{t('aboutMission.visionTitle1')} <span className="text-white/40">{t('aboutMission.visionTitle2')}</span> {t('aboutMission.visionTitle3')}
 						</h2>
-						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
-							{t(
-								'We envision a borderless corporate landscape where deploying talent across African jurisdictions is as seamless, transparent, and secure as processing a digital payment.'
-							)}
-						</p>
+						<p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">{t('aboutMission.visionDesc')}</p>
 					</motion.div>
 				</div>
 			</div>

@@ -1,15 +1,14 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function AboutMetrics() {
 	const { t } = useLanguage();
-
 	const metrics = [
-		{ label: t('Enterprise Clients'), value: '450+', desc: t('across 14 active jurisdictions') },
-		{ label: t('Workforce Placements'), value: '12,000+', desc: t('talent orchestrated annually') },
-		{ label: t('Payroll Operations'), value: 'ብር 1.2B', desc: t('processed through our architecture') },
-		{ label: t('Talent Success Rate'), value: '98.4%', desc: t('executive & technical retention') },
+		{ label: t('aboutMetrics.metric1.label'), value: '450+', desc: t('aboutMetrics.metric1.desc') },
+		{ label: t('aboutMetrics.metric2.label'), value: '12,000+', desc: t('aboutMetrics.metric2.desc') },
+		{ label: t('aboutMetrics.metric3.label'), value: 'Br1.2B', desc: t('aboutMetrics.metric3.desc') },
+		{ label: t('aboutMetrics.metric4.label'), value: '98.4%', desc: t('aboutMetrics.metric4.desc') },
 	];
 
 	return (
@@ -26,7 +25,7 @@ export function AboutMetrics() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.8 }}>
 						<h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-6">
-							{t('The Scale of')} <br /> <span className="text-primary-blue">{t('Our Impact')}</span>
+							{t('aboutMetrics.title1', 'The Scale of')} <br /> <span className="text-primary-blue">{t('aboutMetrics.title2', 'Our Impact')}</span>
 						</h2>
 					</motion.div>
 					<motion.div
@@ -35,11 +34,7 @@ export function AboutMetrics() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 						className="lg:pl-16 border-l border-white/10">
-						<p className="text-white/60 text-lg font-light leading-relaxed">
-							{t(
-								'We do not deal in assumptions. We deal in measurable, scalable enterprise performance. Our infrastructure supports the workforce demands of the continent’s most ambitious companies.'
-							)}
-						</p>
+						<p className="text-white/60 text-lg font-light leading-relaxed">{t('aboutMetrics.description')}</p>
 					</motion.div>
 				</div>
 

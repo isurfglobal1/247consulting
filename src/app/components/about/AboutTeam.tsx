@@ -1,7 +1,7 @@
 import { Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function AboutTeam() {
@@ -9,23 +9,23 @@ export function AboutTeam() {
 
 	const leaders = [
 		{
-			name: t('David O. Alabi'),
-			role: t('Chief Executive Officer'),
-			img: 'https://images.unsplash.com/photo-1614023342667-6f060e9d1e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZXhlY3V0aXZlJTIwbGVhZGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzgwMDExMjY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+			name: t('aboutTeam.leader1.name'),
+			role: t('aboutTeam.leader1.role'),
+			img: 'https://images.unsplash.com/photo-1605602517229-cdbfc3dfb70c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMG1hbGUlMjBjZW8lMjBvZmZpY2UlMjBwb3J0cmFpdCUyMGJyaWdodCUyMGNvbG9yfGVufDF8fHx8MTc4MDcwMTczMXww&ixlib=rb-4.1.0&q=80&w=1080',
 			offset: 'md:mt-0',
 			height: 'aspect-[3/4]',
 		},
 		{
-			name: t('Aisha N. Mensah'),
-			role: t('Head of Talent Intelligence'),
-			img: 'https://images.unsplash.com/photo-1508002366005-75a695ee2d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMGZlbWFsZSUyMGV4ZWN1dGl2ZSUyMG9mZmljZSUyMHBvcnRyYWl0fGVufDF8fHx8MTc4MDAxMTM4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+			name: t('aboutTeam.leader2.name'),
+			role: t('aboutTeam.leader2.role'),
+			img: 'https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMGZlbWFsZSUyMGV4ZWN1dGl2ZSUyMG9mZmljZSUyMHBvcnRyYWl0JTIwYnJpZ2h0JTIwY29sb3J8ZW58MXx8fHwxNzgwNzAxNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080',
 			offset: 'md:mt-32',
 			height: 'aspect-[4/5]',
 		},
 		{
-			name: t('Samuel K. Tesfaye'),
-			role: t('VP of Enterprise Operations'),
-			img: 'https://images.unsplash.com/photo-1758519290890-46b542bb25fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMG1hbGUlMjBleGVjdXRpdmUlMjBvZmZpY2UlMjBwb3J0cmFpdHxlbnwxfHx8fDE3ODAwMTEzODV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+			name: t('aboutTeam.leader3.name'),
+			role: t('aboutTeam.leader3.role'),
+			img: 'https://images.unsplash.com/photo-1495603889488-42d1d66e5523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMG1hbGUlMjBleGVjdXRpdmUlMjBvZmZpY2UlMjBwb3J0cmFpdCUyMHN1aXQlMjBicmlnaHQlMjBjb2xvcnxlbnwxfHx8fDE3ODA3MDE3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080',
 			offset: 'md:mt-16',
 			height: 'aspect-[3/4]',
 		},
@@ -42,15 +42,13 @@ export function AboutTeam() {
 					className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">
 					<div>
 						<h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-6">
-							{t('Command &')} <br /> <span className="text-primary-blue">{t('Control')}</span>
+							{t('aboutTeam.title1')} <br /> <span className="text-primary-blue">{t('aboutTeam.title2')}</span>
 						</h2>
-						<p className="text-white/60 text-lg font-light leading-relaxed max-w-md">
-							{t('A leadership team forged in the complexities of continental expansion. We bring decades of multi-jurisdictional enterprise experience.')}
-						</p>
+						<p className="text-white/60 text-lg font-light leading-relaxed max-w-md">{t('aboutTeam.description')}</p>
 					</div>
-					<button className="px-6 py-3 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors self-start md:self-auto">
-						{t('View Full Leadership')}
-					</button>
+					{/* <button className="px-6 py-3 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors self-start md:self-auto">
+						{t('aboutTeam.button')}
+					</button> */}
 				</motion.div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -66,10 +64,10 @@ export function AboutTeam() {
 								<ImageWithFallback
 									src={leader.img}
 									alt={leader.name}
-									className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+									className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
 								/>
 								{/* Subtle Overlay */}
-								<div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent opacity-80"></div>
+								<div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent opacity-80 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none"></div>
 
 								<a
 									href="#"

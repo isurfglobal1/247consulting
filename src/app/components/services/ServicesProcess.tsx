@@ -1,16 +1,16 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function ServicesProcess() {
 	const { t } = useLanguage();
 
 	const steps = [
-		{ num: '01', title: t('Consultation & Architecture'), desc: t('Mapping the operational gaps and designing the human capital infrastructure.') },
-		{ num: '02', title: t('Talent Mapping'), desc: t('Algorithmic market analysis and executive target identification.') },
-		{ num: '03', title: t('Verification Protocol'), desc: t('Rigorous legal, credential, and behavioral vetting processes.') },
-		{ num: '04', title: t('System Deployment'), desc: t('Seamless integration of personnel, payroll, and compliance systems.') },
-		{ num: '05', title: t('Workforce Optimization'), desc: t('Continuous performance analytics and structural scaling.') },
+		{ num: '01', title: t('servicesProcess.step1.title'), desc: t('servicesProcess.step1.desc') },
+		{ num: '02', title: t('servicesProcess.step2.title'), desc: t('servicesProcess.step2.desc') },
+		{ num: '03', title: t('servicesProcess.step3.title'), desc: t('servicesProcess.step3.desc') },
+		{ num: '04', title: t('servicesProcess.step4.title'), desc: t('servicesProcess.step4.desc') },
+		{ num: '05', title: t('servicesProcess.step5.title'), desc: t('servicesProcess.step5.desc') },
 	];
 
 	return (
@@ -27,9 +27,9 @@ export function ServicesProcess() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.8 }}
 					className="text-center max-w-4xl mx-auto mb-24">
-					<div className="text-primary-blue font-mono text-sm tracking-widest uppercase mb-6">{t('Execution Protocol')}</div>
+					<div className="text-primary-blue font-mono text-sm tracking-widest uppercase mb-6">{t('servicesProcess.executionProtocol')}</div>
 					<h2 className="text-white text-4xl md:text-6xl font-heading font-black tracking-tight leading-[1.05]">
-						{t('The Operational Flow')} <br /> <span className="text-white/30">{t('Architecture')}</span>
+						{t('servicesProcess.title1')} <br /> <span className="text-white/30">{t('servicesProcess.title2')}</span>
 					</h2>
 				</motion.div>
 

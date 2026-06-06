@@ -1,26 +1,26 @@
 import { motion } from 'motion/react';
 
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function CareersBenefits() {
 	const { t } = useLanguage();
 
 	const benefits = [
 		{
-			title: t('Executive Trajectory'),
-			desc: t('Rigorous mentorship and unfiltered exposure to multi-national operations, accelerating your career by years.'),
+			title: t('careersBenefits.benefit1.title'),
+			desc: t('careersBenefits.benefit1.desc'),
 		},
 		{
-			title: t('Sovereign Flexibility'),
-			desc: t('We measure impact, not presence. Fluid remote frameworks structured around pure operational output.'),
+			title: t('careersBenefits.benefit2.title'),
+			desc: t('careersBenefits.benefit2.desc'),
 		},
 		{
-			title: t('Cognitive Capital'),
-			desc: t('Uncapped budgets for continued learning, certifications, and global enterprise conferences.'),
+			title: t('careersBenefits.benefit3.title'),
+			desc: t('careersBenefits.benefit3.desc'),
 		},
 		{
-			title: t('Holistic Architecture'),
-			desc: t('Premium healthcare scaling to your family, comprehensive wellness stipends, and mandated reset periods.'),
+			title: t('careersBenefits.benefit4.title'),
+			desc: t('careersBenefits.benefit4.desc'),
 		},
 	];
 
@@ -30,8 +30,8 @@ export function CareersBenefits() {
 				<div className="flex flex-col lg:flex-row gap-20 lg:gap-32">
 					<div className="w-full lg:w-1/3">
 						<h2 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.1] tracking-tighter mb-8 sticky top-32">
-							{t('THE')} <br />
-							<span className="text-white/40">{t('STANDARDS.')}</span>
+							{t('careersBenefits.title1')} <br />
+							<span className="text-white/40">{t('careersBenefits.title2')}</span>
 						</h2>
 					</div>
 
