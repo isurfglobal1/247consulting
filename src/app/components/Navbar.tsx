@@ -110,14 +110,14 @@ export function Navbar() {
 					onMouseLeave={() => setActiveDropdown(null)}>
 					{/* Main Navbar Bar */}
 					<div className="h-[88px] flex items-center justify-between px-8">
-						<div className="flex items-center gap-2 relative z-20">
+						<div className="flex items-center justify-center gap-2 relative z-20">
 							<Link
 								to="/"
 								className="flex items-center gap-3 group">
-								<div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-xl group-hover:scale-105 group-hover:bg-primary-blue group-hover:text-real-white transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:shadow-[0_0_30px_rgba(29,155,240,0.5)]">
-									24
+								<div className="w-20 h-12 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-2xl group-hover:bg-primary-blue group-hover:text-white transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+									247
 								</div>
-								<span className="font-heading font-bold text-2xl tracking-tighter text-white">247HR</span>
+								<span className="font-heading font-black text-2xl tracking-tighter text-white">Consulting</span>
 							</Link>
 						</div>
 
@@ -323,7 +323,9 @@ export function Navbar() {
 														to={link.path}
 														className="flex items-center justify-between group/link py-2"
 														onClick={() => setActiveDropdown(null)}>
-														<span className="text-lg font-light text-white/70 group-hover/link:text-white transition-colors duration-300">{link.label}</span>
+														<span className="text-lg font-light text-white/70 group-hover/link:text-white transition-colors duration-300">
+															{t(`nav.${activeDropdown.toLowerCase()}.sublink${idx + 1}`, link.label)}
+														</span>
 														<ArrowRight
 															size={16}
 															className="text-primary-blue opacity-0 -translate-x-4 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300"

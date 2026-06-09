@@ -6,12 +6,12 @@ export function ServicesMetrics() {
 	const { t } = useLanguage();
 
 	const metrics = [
-		{ value: '450+', label: t('servicesMetrics.metric1.label') },
-		{ value: 'Br1.2B', label: t('servicesMetrics.metric2.label') },
-		{ value: '14', label: t('servicesMetrics.metric3.label') },
-		{ value: '12k+', label: t('servicesMetrics.metric4.label') },
+		{ value: '25+', label: t('servicesMetrics.metric1.label') },
+		{ value: 'Birr 1.2M', label: t('servicesMetrics.metric2.label') },
+		{ value: '2', label: t('servicesMetrics.metric3.label') },
+		{ value: '2k+', label: t('servicesMetrics.metric4.label') },
 		{ value: '98%', label: t('servicesMetrics.metric5.label') },
-		{ value: '14D', label: t('servicesMetrics.metric6.label') },
+		{ value: '10D', label: t('servicesMetrics.metric6.label') },
 	];
 
 	return (

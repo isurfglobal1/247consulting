@@ -1,5 +1,4 @@
 import { ArrowUpRight, Linkedin, Mail, Twitter } from 'lucide-react';
-import { motion } from 'motion/react';
 import { Link } from 'react-router';
 
 import { useLanguage } from '../contexts/LanguageContext';

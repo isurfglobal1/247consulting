@@ -209,7 +209,7 @@ export function CareersHero() {
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ delay: 1.5, duration: 1 }}
+					transition={{ delay: 0, duration: 0.1 }}
 					className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20">
 					<span className="font-mono text-xs uppercase tracking-widest ch-scroll-text transition-all duration-500">{t('careersHero.scroll')}</span>
 					<div className="h-16 overflow-hidden ch-scroll-track transition-all duration-500">

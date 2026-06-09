@@ -5,10 +5,10 @@ import { useLanguage } from '../../contexts/LanguageContext';
 export function AboutMetrics() {
 	const { t } = useLanguage();
 	const metrics = [
-		{ label: t('aboutMetrics.metric1.label'), value: '450+', desc: t('aboutMetrics.metric1.desc') },
-		{ label: t('aboutMetrics.metric2.label'), value: '12,000+', desc: t('aboutMetrics.metric2.desc') },
-		{ label: t('aboutMetrics.metric3.label'), value: 'Br1.2B', desc: t('aboutMetrics.metric3.desc') },
-		{ label: t('aboutMetrics.metric4.label'), value: '98.4%', desc: t('aboutMetrics.metric4.desc') },
+		{ label: t('aboutMetrics.metric1.label'), value: '25+', desc: t('aboutMetrics.metric1.desc') },
+		{ label: t('aboutMetrics.metric2.label'), value: '2k+', desc: t('aboutMetrics.metric2.desc') },
+		{ label: t('aboutMetrics.metric3.label'), value: 'Birr 1.2M', desc: t('aboutMetrics.metric3.desc') },
+		{ label: t('aboutMetrics.metric4.label'), value: '98%', desc: t('aboutMetrics.metric4.desc') },
 	];
 
 	return (

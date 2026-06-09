@@ -15,9 +15,9 @@ export function Contact() {
   `;
 
 	return (
-		<div className="bg-[#0A0A0A] min-h-screen text-white w-full overflow-hidden font-body pt-32">
+		<div className="bg-[#0A0A0A] min-h-screen text-white w-full overflow-hidden font-body">
 			{/* Hero Section */}
-			<section className="relative w-full min-h-[85vh] flex flex-col justify-center overflow-hidden">
+			<section className="relative w-full min-h-[100dvh] flex flex-col justify-center overflow-hidden pt-10">
 				<div className="absolute inset-0 z-0">
 					<ImageWithFallback
 						src="https://images.unsplash.com/photo-1497366216548-37526070297c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBtb2Rlcm4lMjBvZmZpY2V8ZW58MXx8fHwxNjgxNDkxNDI3fDA&ixlib=rb-4.1.0&q=80&w=1440"
@@ -142,7 +142,7 @@ export function Contact() {
 											{t('contact.serviceOption4')}
 										</option>
 									</select>
-									<div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
+									<div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
 										<ArrowUpRight
 											size={20}
 											className="rotate-45"
@@ -197,30 +197,28 @@ export function Contact() {
 								<div className="w-12 h-[1px] bg-white/10 group-hover:bg-primary-blue group-hover:w-24 transition-all duration-500" />
 							</div>
 
-							<div className="flex flex-col gap-4 md:gap-6 group cursor-pointer hover:bg-white/5 -mx-6 md:-mx-8 px-6 md:px-8 py-4 md:py-6 rounded-2xl transition-all duration-500">
-								<div className="flex items-center gap-3 md:gap-4 text-white/40 mb-1 md:mb-2 group-hover:text-primary-blue transition-colors duration-300">
+							<div className="flex flex-col gap-4 md:gap-6 cursor-pointer -mx-6 md:-mx-8 px-6 md:px-8 py-4 md:py-6 rounded-2xl transition-all duration-500">
+								<div className="flex items-center gap-3 md:gap-4 text-white/40 mb-1 md:mb-2 hover:text-primary-blue transition-colors duration-300">
 									<Mail
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
 									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.emailLabel')}</span>
 								</div>
-								<p className="text-xl md:text-2xl font-light text-white group-hover:text-primary-blue transition-colors duration-300 break-all">
-									{t('contact.emailAddress')}
-								</p>
+								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300 break-all">{t('contact.emailAddress')}</p>
 							</div>
 
-							<div className="flex flex-col gap-6 group cursor-pointer hover:bg-white/5 -mx-6 md:-mx-8 px-6 md:px-8 py-4 md:py-6 rounded-2xl transition-all duration-500">
-								<div className="flex items-center gap-3 md:gap-4 text-white/40 mb-1 md:mb-2 group-hover:text-primary-blue transition-colors duration-300">
+							<div className="flex flex-col gap-6 cursor-pointer hover:bg-white/5 -mx-6 md:-mx-8 px-6 md:px-8 py-4 md:py-6 rounded-2xl transition-all duration-500">
+								<div className="flex items-center gap-3 md:gap-4 text-white/40 mb-1 md:mb-2 hover:text-primary-blue transition-colors duration-300">
 									<Phone
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
 									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.phoneLabel')}</span>
 								</div>
-								<p className="text-xl md:text-2xl font-light text-white group-hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumber')}</p>
-								<p className="text-xl md:text-2xl font-light text-white group-hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumberAlt')}</p>
-								<p className="text-xl md:text-2xl font-light text-white group-hover:text-primary-blue transition-colors duration-300">{'+251 98 725 2643'}</p>
+								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumber')}</p>
+								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumberAlt')}</p>
+								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300">{'+251 98 725 2643'}</p>
 							</div>
 
 							<div className="flex flex-col gap-4 md:gap-6">
@@ -291,10 +289,10 @@ export function Contact() {
 						<span className="relative z-10 whitespace-nowrap">{t('contact.finalButton')}</span>
 						<ArrowUpRight
 							size={18}
-							className="relative z-10 group-hover:rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+							className="relative z-10 hover:rotate-45 hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300"
 						/>
-						<div className="absolute inset-0 bg-primary-blue transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
-						<span className="absolute inset-0 flex items-center justify-center gap-2 md:gap-4 text-white transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-20 font-bold tracking-widest uppercase text-[10px] md:text-sm whitespace-nowrap">
+						<div className="absolute inset-0 bg-primary-blue transform translate-y-full hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
+						<span className="absolute inset-0 flex items-center justify-center gap-2 md:gap-4 text-white transform -translate-y-full hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-20 font-bold tracking-widest uppercase text-[10px] md:text-sm whitespace-nowrap">
 							{t('contact.finalButton')}{' '}
 							<ArrowUpRight
 								size={18}

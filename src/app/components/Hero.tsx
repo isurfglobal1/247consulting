@@ -56,7 +56,7 @@ export function Hero() {
 						{/* Main Rounded Image */}
 						<div className="relative w-[85%] max-w-[500px] aspect-[4/5] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl z-10">
 							<ImageWithFallback
-								src="https://images.unsplash.com/photo-1604933762021-54a5858c9832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwYnVzaW5lc3N3b21hbiUyMGxhcHRvcHxlbnwxfHx8fDE3Nzk5OTc2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+								src="/hero-image.webp"
 								alt="Professional using software"
 								className="w-full h-full object-cover opacity-90"
 							/>
@@ -77,8 +77,8 @@ export function Hero() {
 								/>
 							</div>
 							<div className="flex-1">
-								<div className="text-white text-sm font-bold">Hayle Calden</div>
-								<div className="text-white/50 text-xs">HR Director</div>
+								<div className="text-white text-sm font-bold">{t('hero.profileName')}</div>
+								<div className="text-white/50 text-xs">{t('hero.profileRole')}</div>
 							</div>
 							<div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
 						</motion.div>
@@ -90,16 +90,16 @@ export function Hero() {
 							transition={{ delay: 0.8, duration: 0.8 }}
 							className="absolute top-0 right-[5%] z-20 bg-[#151515]/90 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-[200px]">
 							<div className="text-white/50 text-xs font-medium mb-1 uppercase tracking-wider">{t('hero.salary', 'Salary')}</div>
-							<div className="text-white text-2xl font-heading font-bold mb-4">Br5,400</div>
+							<div className="text-white text-2xl font-heading font-bold mb-4">Birr5,400</div>
 
 							<div className="space-y-3">
 								<div className="flex justify-between items-center text-xs">
 									<span className="text-white/60">{t('hero.base', 'Base')}</span>
-									<span className="text-white font-medium">Br4,500</span>
+									<span className="text-white font-medium">Birr4,500</span>
 								</div>
 								<div className="flex justify-between items-center text-xs">
 									<span className="text-white/60">{t('hero.bonus', 'Bonus')}</span>
-									<span className="text-green-400 font-medium">+Br900</span>
+									<span className="text-green-400 font-medium">+Birr900</span>
 								</div>
 							</div>
 						</motion.div>
@@ -113,9 +113,9 @@ export function Hero() {
 							<div className="text-white text-sm font-bold mb-4">{t('hero.recentPayroll', 'Recent Payroll')}</div>
 							<div className="space-y-4">
 								{[
-									{ name: 'Sarah Oken', role: 'Design', amount: 'Br3,200', color: 'bg-purple-500' },
-									{ name: 'James Carter', role: 'Engineering', amount: 'Br4,500', color: 'bg-blue-500' },
-									{ name: 'Helen Davies', role: 'Marketing', amount: 'Br2,900', color: 'bg-orange-500' },
+									{ name: t('hero.payroll.name1'), role: t('hero.payroll.role1'), amount: 'Birr3,200', color: 'bg-purple-500' },
+									{ name: t('hero.payroll.name2'), role: t('hero.payroll.role2'), amount: 'Birr4,500', color: 'bg-blue-500' },
+									{ name: t('hero.payroll.name3'), role: t('hero.payroll.role3'), amount: 'Birr2,900', color: 'bg-orange-500' },
 								].map((item, i) => (
 									<div
 										key={i}
