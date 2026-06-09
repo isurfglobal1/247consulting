@@ -30,7 +30,7 @@ export function CareersCTA() {
 						{t('careersCTA.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary-blue to-primary-blue/30">{t('careersCTA.title2')}</span>
 					</h2>
 
-					<button className="group relative overflow-hidden bg-white text-primary-black px-12 py-6 rounded-full font-bold text-lg tracking-wide hover:text-white hover:shadow-[0_0_40px_rgba(29,155,240,0.5)] transition-all duration-500 hover:scale-105 flex items-center gap-4">
+					<button className="group relative overflow-hidden bg-white text-primary-black px-12 py-6 rounded-full font-bold text-lg tracking-wide hover:text-real-white hover:shadow-[0_0_40px_rgba(29,155,240,0.5)] transition-all duration-500 hover:scale-105 flex items-center gap-4">
 						<span className="relative z-10">{t('careersCTA.button')}</span>
 						<ArrowUpRight
 							className="relative z-10 group-hover:rotate-45 transition-transform duration-500"

@@ -22,7 +22,7 @@ export function Footer() {
 						<div className="flex gap-6 mt-4">
 							<Link
 								to="/contact"
-								className="h-[56px] px-8 rounded-full bg-white text-primary-black font-bold tracking-widest uppercase text-sm flex items-center gap-3 hover:bg-primary-blue hover:text-white hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] transition-all duration-500 group">
+								className="h-[56px] px-8 rounded-full bg-white text-primary-black font-bold tracking-widest uppercase text-sm flex items-center gap-3 hover:bg-primary-blue hover:text-real-white hover:shadow-[0_0_30px_rgba(29,155,240,0.4)] transition-all duration-500 group">
 								{t('footer.ctaButton')}{' '}
 								<ArrowUpRight
 									size={20}

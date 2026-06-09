@@ -114,7 +114,7 @@ export function Navbar() {
 							<Link
 								to="/"
 								className="flex items-center gap-3 group">
-								<div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-xl group-hover:scale-105 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:shadow-[0_0_30px_rgba(29,155,240,0.5)]">
+								<div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary-black font-heading font-black text-xl group-hover:scale-105 group-hover:bg-primary-blue group-hover:text-real-white transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:shadow-[0_0_30px_rgba(29,155,240,0.5)]">
 									24
 								</div>
 								<span className="font-heading font-bold text-2xl tracking-tighter text-white">247HR</span>

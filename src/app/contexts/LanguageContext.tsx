@@ -428,13 +428,14 @@ const translations: Record<Language, Record<string, string>> = {
 
 		// Contact Information
 		'contact.hqLabel': 'Global HQ',
-		'contact.hqAddress1': 'The Exchange Tower,',
-		'contact.hqAddress2': 'Addis Ababa, Ethiopia',
-		'contact.hqAddress3': ' ',
+		'contact.hqAddress1': 'Woreda 9,',
+		'contact.hqAddress2': 'Addis Ketema,',
+		'contact.hqAddress3': 'Addis Ababa, Ethiopia',
 		'contact.emailLabel': 'Direct Line',
 		'contact.emailAddress': 'executive@247consulting.com',
 		'contact.phoneLabel': 'Operations Center',
-		'contact.phoneNumber': '+254 700 247 000',
+		'contact.phoneNumber': '+251 98 730 3743',
+		'contact.phoneNumberAlt': '+251 98 850 0086',
 		'contact.coverageLabel': 'Global Coverage',
 		'contact.coverageLine1': '24/7 Enterprise Support',
 		'contact.coverageLine2': 'GMT+3 Primary Operations',
@@ -456,7 +457,8 @@ const translations: Record<Language, Record<string, string>> = {
 		'footer.newsletterPlaceholder': 'Executive Email',
 
 		// Footer HQ Section
-		'footer.hqDescription': 'Global Headquarters: Nairobi, Kenya. Deploying elite workforce infrastructure across emerging enterprise markets.',
+		'footer.hqDescription':
+			'Global Headquarters: Woreda 9, Addis Ketema, Addis Ababa, Ethiopia. Deploying elite workforce infrastructure across emerging enterprise markets.',
 
 		// Footer Column Titles
 		'footer.intelligenceTitle': 'Intelligence',
@@ -891,13 +893,14 @@ const translations: Record<Language, Record<string, string>> = {
 
 		// Contact Information
 		'contact.hqLabel': 'ዓለም አቀፍ ዋና መሥሪያ ቤት',
-		'contact.hqAddress1': 'ዘ ኤክስቼንጅ ታወር፣',
-		'contact.hqAddress2': 'አዲስ አበባ፣ ኢትዮጵያ',
-		'contact.hqAddress3': ' ',
+		'contact.hqAddress1': 'ወረዳ 9፣',
+		'contact.hqAddress2': 'አዲስ ከተማ፣',
+		'contact.hqAddress3': 'አዲስ አበባ፣ ኢትዮጵያ',
 		'contact.emailLabel': 'ቀጥተኛ መስመር',
 		'contact.emailAddress': 'executive@247consulting.com',
 		'contact.phoneLabel': 'ኦፕሬሽን ማዕከል',
-		'contact.phoneNumber': '+254 700 247 000',
+		'contact.phoneNumber': '+251 98 730 3743',
+		'contact.phoneNumberAlt': '+251 98 850 0086',
 		'contact.coverageLabel': 'ዓለም አቀፍ ሽፋን',
 		'contact.coverageLine1': '24/7 የኢንተርፕራይዝ ድጋፍ',
 		'contact.coverageLine2': 'GMT+3 ዋና ኦፕሬሽኖች',
@@ -920,7 +923,7 @@ const translations: Record<Language, Record<string, string>> = {
 		'footer.newsletterPlaceholder': 'ሥራ አስፈጻሚ ኢሜይል',
 
 		// Footer HQ Section
-		'footer.hqDescription': 'ዓለም አቀፍ ዋና መሥሪያ ቤት፡ ናይሮቢ፣ ኬንያ። በታዳጊ የኢንተርፕራይዝ ገበያዎች ላይ ልሂቃን የሰው ሀይል መሠረተ ልማት ማሰማራት።',
+		'footer.hqDescription': 'ዓለም አቀፍ ዋና መሥሪያ ቤት፡ ወረዳ 9፣ አዲስ ከተማ፣ አዲስ አበባ፣ ኢትዮጵያ። በታዳጊ የኢንተርፕራይዝ ገበያዎች ላይ ልሂቃን የሰው ሀይል መሠረተ ልማት ማሰማራት።',
 
 		// Footer Column Titles
 		'footer.intelligenceTitle': 'እውቀት',
