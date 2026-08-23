@@ -66,10 +66,10 @@ export function NotFound() {
 					{/* 404 Number with Glow Effect */}
 					<div className="relative mb-8">
 						<div
-							className={`text-[120px] md:text-[180px] lg:text-[220px] font-heading font-black ${textDimClass} select-none absolute inset-0 flex items-center justify-center -z-10`}>
+							className={`text-[118px] md:text-[178px] lg:text-[218px] font-heading font-black ${textDimClass} select-none absolute inset-0 flex items-center justify-center -z-10`}>
 							404
 						</div>
-						<div className={`text-[100px] md:text-[160px] lg:text-[200px] font-heading font-black ${textPrimaryClass} leading-none tracking-tighter`}>404</div>
+						<div className={`text-[98px] md:text-[158px] lg:text-[198px] font-heading font-black ${textPrimaryClass} leading-none tracking-tighter`}>404</div>
 						<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-primary-blue/50"></div>
 					</div>
 

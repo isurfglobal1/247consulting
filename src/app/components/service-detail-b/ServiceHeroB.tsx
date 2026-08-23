@@ -34,7 +34,7 @@ export function ServiceHeroB() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[#E5E7EB] font-heading font-bold tracking-tighter leading-[0.85] text-[clamp(4rem,9vw,10rem)] uppercase"
+              className="text-[#E5E7EB] font-heading font-bold tracking-tighter leading-[0.85] text-[clamp(3.875rem,9vw,9.875rem)] uppercase"
             >
               <span className="block overflow-hidden pb-2">
                 <motion.span 
@@ -87,7 +87,7 @@ export function ServiceHeroB() {
             className="md:col-span-4 flex justify-start md:justify-end"
           >
             <div className="flex flex-col items-start md:items-end text-left md:text-right">
-              <div className="text-white font-mono text-[10px] tracking-widest uppercase mb-2">Scroll to explore</div>
+              <div className="text-white font-mono text-[12px] tracking-widest uppercase mb-2">Scroll to explore</div>
               <div className="w-px h-16 bg-white/20 relative overflow-hidden">
                 <motion.div 
                   initial={{ y: "-100%" }}

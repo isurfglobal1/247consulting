@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { Check, Sparkles } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -113,7 +114,7 @@ export function Pricing() {
               
               <span className={`text-sm md:text-base flex items-center gap-3 transition-colors ${isAnnual ? 'text-white font-medium' : 'text-white/50'}`}>
                 {t("pricing.annual")}
-                <span className="bg-primary-blue/10 border border-primary-blue/20 text-primary-blue text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="bg-primary-blue/10 border border-primary-blue/20 text-primary-blue text-[12px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {t("pricing.save")}
                 </span>
               </span>
@@ -206,13 +207,13 @@ export function Pricing() {
 
                   {/* Action Button */}
                   <div className="mt-auto relative z-10">
-                    <button className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${
+                    <Link to="/contact" className={`block w-full py-4 rounded-xl font-bold transition-all duration-300 text-center ${
                       plan.popular 
                         ? 'bg-primary-blue text-white hover:bg-white hover:text-primary-black shadow-[0_0_20px_rgba(29,155,240,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]'
                         : 'bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-white/20'
                     }`}>
                       {plan.buttonText}
-                    </button>
+                    </Link>
                   </div>
                   
                 </div>

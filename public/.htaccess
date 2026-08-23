@@ -1,0 +1,56 @@
+# 247HR Consulting — static hosting rules (Hostinger hPanel / Apache / LiteSpeed)
+
+# --- SPA fallback -----------------------------------------------------
+# The app uses client-side routing (react-router BrowserRouter), so every
+# path (e.g. /about, /careers/123) must be served index.html and let the
+# app render the right screen — otherwise refreshing or deep-linking to a
+# non-root URL returns a hard 404 from the server.
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+	# Let real files/folders (assets, images, sitemap.xml, etc.) serve as-is
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^ - [L]
+
+	# Everything else falls back to index.html
+	RewriteRule ^ index.html [L]
+</IfModule>
+
+# --- Correct MIME types -------------------------------------------------
+<IfModule mod_mime.c>
+	AddType application/manifest+json .webmanifest
+	AddType image/svg+xml .svg
+	AddType font/woff2 .woff2
+</IfModule>
+
+# --- Caching --------------------------------------------------------------
+<IfModule mod_expires.c>
+	ExpiresActive On
+
+	# HTML must always be revalidated so users get new deploys immediately
+	ExpiresByType text/html "access plus 0 seconds"
+
+	# Vite fingerprints JS/CSS with content hashes, so these are safe to cache hard
+	ExpiresByType application/javascript "access plus 1 year"
+	ExpiresByType text/css "access plus 1 year"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/webp "access plus 1 month"
+	ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch "\.html$">
+		Header set Cache-Control "no-cache, must-revalidate"
+	</FilesMatch>
+	<FilesMatch "\.(js|css|png|jpe?g|webp|svg|woff2?)$">
+		Header set Cache-Control "public, max-age=31536000, immutable"
+	</FilesMatch>
+</IfModule>
+
+# --- Compression ------------------------------------------------------
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/css text/xml application/xml application/javascript application/json image/svg+xml
+</IfModule>

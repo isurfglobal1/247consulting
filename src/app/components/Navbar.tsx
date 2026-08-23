@@ -13,10 +13,10 @@ const navData = {
 			'https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwbW9kZXJuJTIwb2ZmaWNlJTIwdGVjaHxlbnwxfHx8fDE2ODI1NTQ1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
 		headline: 'Transforming Global Operations',
 		sublinks: [
-			{ label: 'Executive Search', path: '/services/executive-search' },
-			{ label: 'Workforce Infrastructure', path: '/services/workforce-infrastructure' },
-			{ label: 'Talent Analytics', path: '/services/talent-analytics' },
-			{ label: 'Risk & Compliance', path: '/services/risk-compliance' },
+			{ label: 'Executive Search', path: '/services' },
+			{ label: 'Workforce Infrastructure', path: '/services' },
+			{ label: 'Talent Analytics', path: '/services' },
+			{ label: 'Risk & Compliance', path: '/services' },
 		],
 	},
 	Careers: {

@@ -8,10 +8,10 @@ export function JobQualifications({ job }: { job: any }) {
           
           <div className="lg:col-span-5">
             <div className="sticky top-32">
-              <h2 className="text-3xl md:text-[44px] font-heading font-black text-white leading-[1.1] tracking-tighter uppercase mb-6">
+              <h2 className="text-3xl md:text-[42px] font-heading font-black text-white leading-[1.1] tracking-tighter uppercase mb-6">
                 ELITE <br /> <span className="text-white/30">STANDARDS.</span>
               </h2>
-              <p className="text-white/50 text-[18px] font-light max-w-sm">
+              <p className="text-white/50 text-[16px] font-light max-w-sm">
                 We do not compromise on caliber. This role requires an individual who combines intellectual rigor with extreme operational velocity.
               </p>
             </div>
@@ -30,7 +30,7 @@ export function JobQualifications({ job }: { job: any }) {
                 <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                   {qual.title}
                 </h3>
-                <p className="text-[18px] text-white/60 font-light leading-relaxed">
+                <p className="text-[16px] text-white/60 font-light leading-relaxed">
                   {qual.desc}
                 </p>
               </motion.div>

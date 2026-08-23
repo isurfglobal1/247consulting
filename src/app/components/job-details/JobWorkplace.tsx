@@ -6,7 +6,7 @@ export function JobWorkplace() {
     <section className="relative w-full py-40 bg-[#0A0A0A] overflow-hidden">
       <div className="container-enterprise">
         <div className="flex flex-col items-center text-center mb-24">
-          <h2 className="text-4xl md:text-[56px] font-heading font-black text-white uppercase tracking-tighter leading-[1.1] max-w-4xl">
+          <h2 className="text-4xl md:text-[54px] font-heading font-black text-white uppercase tracking-tighter leading-[1.1] max-w-4xl">
             AN ENVIRONMENT BUILT FOR <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary-blue to-primary-blue/30">COGNITIVE DOMINANCE.</span>
           </h2>

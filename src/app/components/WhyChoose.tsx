@@ -29,7 +29,7 @@ export function WhyChoose() {
             <span className="text-primary-blue font-bold tracking-[0.2em] uppercase text-xs mb-6 block flex items-center gap-3">
               <span className="w-8 h-px bg-primary-blue"></span> Why Partner With Us
             </span>
-            <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4.5rem)] leading-[1] tracking-tight text-white mb-8">
+            <h2 className="font-heading font-black text-[clamp(2.375rem,5vw,4.375rem)] leading-[1] tracking-tight text-white mb-8">
               Command Your <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-white/60">Workforce Scale.</span>
             </h2>
@@ -113,7 +113,7 @@ export function WhyChoose() {
                 </div>
 
                 {/* Simulated Terminal Text */}
-                <div className="mt-12 bg-black/50 p-4 rounded-xl border border-white/5 font-mono text-[10px] text-white/30 leading-relaxed">
+                <div className="mt-12 bg-black/50 p-4 rounded-xl border border-white/5 font-mono text-[12px] text-white/30 leading-relaxed">
                   <p className="text-primary-blue/60">{`> INITIALIZING ENTERPRISE PROTOCOL...`}</p>
                   <p>{`> VALIDATING CANDIDATE MATRICES... [OK]`}</p>
                   <p>{`> ESTABLISHING COMPLIANCE HANDSHAKE... [OK]`}</p>

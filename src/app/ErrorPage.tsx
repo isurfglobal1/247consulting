@@ -154,7 +154,7 @@ export function ErrorPage({ error }: ErrorPageProps) {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.1 }}
-							className={`text-[80px] md:text-[120px] font-heading font-black ${textDimClass} select-none mb-4`}>
+							className={`text-[78px] md:text-[118px] font-heading font-black ${textDimClass} select-none mb-4`}>
 							{errorType}
 						</motion.div>
 					)}

@@ -3,11 +3,39 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './components/ui/select';
+import { SHADCN_FIELD, SHADCN_ITEM, SHADCN_POPUP } from './components/ui/brand';
 import { useLanguage } from './contexts/LanguageContext';
+import { formToFields, sendAsEmail } from './utils/mailto';
+
+const CONTACT_FIELD_LABELS = {
+	name: 'Full Name',
+	company: 'Company Name',
+	email: 'Email',
+	phone: 'Phone',
+	message: 'Message',
+};
 
 export function Contact() {
 	const { t } = useLanguage();
 	const [activeInput, setActiveInput] = useState<string | null>(null);
+	const [service, setService] = useState('');
+
+	const serviceOptions = [
+		{ value: 'executive', label: t('contact.serviceOption1') },
+		{ value: 'infrastructure', label: t('contact.serviceOption2') },
+		{ value: 'compliance', label: t('contact.serviceOption3') },
+		{ value: 'analytics', label: t('contact.serviceOption4') },
+	];
+
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const fields = {
+			...formToFields(e.currentTarget, CONTACT_FIELD_LABELS),
+			'Service Interest': serviceOptions.find((s) => s.value === service)?.label,
+		};
+		sendAsEmail(`New Contact Inquiry from ${fields['Full Name'] || 'Website Visitor'}`, fields);
+	};
 
 	const inputClasses = (name: string) => `
     w-full bg-white/5 border ${activeInput === name ? 'border-primary-blue shadow-[0_0_30px_-10px_rgba(29,155,240,0.4)]' : 'border-white/20 shadow-sm'} 
@@ -39,7 +67,7 @@ export function Contact() {
 								<span className="w-8 h-[1px] bg-primary-blue" />
 								<span className="text-primary-blue font-mono text-sm tracking-[0.2em] uppercase">{t('contact.heroBadge')}</span>
 							</div>
-							<h1 className="text-[clamp(2.5rem,10vw,5rem)] md:text-[64px] lg:text-[88px] font-heading font-black text-white leading-[1.1] md:leading-[0.9] tracking-tighter uppercase mb-8">
+							<h1 className="text-[clamp(2.375rem,10vw,4.875rem)] md:text-[62px] lg:text-[86px] font-heading font-black text-white leading-[1.1] md:leading-[0.9] tracking-tighter uppercase mb-8">
 								{t('contact.heroTitle1')} <br />
 								<span className="md:whitespace-nowrap">{t('contact.heroTitle2')}</span> {t('contact.heroTitle3')}
 							</h1>
@@ -66,11 +94,13 @@ export function Contact() {
 
 							<form
 								className="flex flex-col gap-8 md:gap-12"
-								onSubmit={(e) => e.preventDefault()}>
+								onSubmit={handleSubmit}>
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 									<div className="relative group">
 										<input
 											type="text"
+											name="name"
+											required
 											placeholder={t('contact.fullNamePlaceholder')}
 											className={inputClasses('name')}
 											onFocus={() => setActiveInput('name')}
@@ -80,6 +110,7 @@ export function Contact() {
 									<div className="relative group">
 										<input
 											type="text"
+											name="company"
 											placeholder={t('contact.companyNamePlaceholder')}
 											className={inputClasses('company')}
 											onFocus={() => setActiveInput('company')}
@@ -92,6 +123,8 @@ export function Contact() {
 									<div className="relative group">
 										<input
 											type="email"
+											name="email"
+											required
 											placeholder={t('contact.emailPlaceholder')}
 											className={inputClasses('email')}
 											onFocus={() => setActiveInput('email')}
@@ -101,6 +134,7 @@ export function Contact() {
 									<div className="relative group">
 										<input
 											type="tel"
+											name="phone"
 											placeholder={t('contact.phonePlaceholder')}
 											className={inputClasses('phone')}
 											onFocus={() => setActiveInput('phone')}
@@ -110,38 +144,28 @@ export function Contact() {
 								</div>
 
 								<div className="relative group">
-									<select
-										className={`${inputClasses('service')} appearance-none cursor-pointer`}
-										onFocus={() => setActiveInput('service')}
-										onBlur={() => setActiveInput(null)}
-										defaultValue="">
-										<option
-											value=""
-											disabled
-											className="bg-[#0A0A0A] text-white/50">
-											{t('contact.serviceInterestPlaceholder')}
-										</option>
-										<option
-											value="executive"
-											className="bg-[#0A0A0A]">
-											{t('contact.serviceOption1')}
-										</option>
-										<option
-											value="infrastructure"
-											className="bg-[#0A0A0A]">
-											{t('contact.serviceOption2')}
-										</option>
-										<option
-											value="compliance"
-											className="bg-[#0A0A0A]">
-											{t('contact.serviceOption3')}
-										</option>
-										<option
-											value="analytics"
-											className="bg-[#0A0A0A]">
-											{t('contact.serviceOption4')}
-										</option>
-									</select>
+									<Select
+										value={service}
+										onValueChange={setService}>
+										<SelectTrigger
+											className={`${SHADCN_FIELD} !h-auto w-full px-6 py-5 text-lg [&_svg]:hidden ${
+												activeInput === 'service' ? 'border-primary-blue shadow-[0_0_30px_-10px_rgba(29,155,240,0.4)]' : 'border-white/20 shadow-sm'
+											}`}
+											onFocus={() => setActiveInput('service')}
+											onBlur={() => setActiveInput(null)}>
+											<SelectValue placeholder={t('contact.serviceInterestPlaceholder')} />
+										</SelectTrigger>
+										<SelectContent className={SHADCN_POPUP}>
+											{serviceOptions.map((option) => (
+												<SelectItem
+													key={option.value}
+													value={option.value}
+													className={SHADCN_ITEM}>
+													{option.label}
+												</SelectItem>
+											))}
+										</SelectContent>
+									</Select>
 									<div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
 										<ArrowUpRight
 											size={20}
@@ -152,6 +176,7 @@ export function Contact() {
 
 								<div className="relative group">
 									<textarea
+										name="message"
 										placeholder={t('contact.messagePlaceholder')}
 										rows={4}
 										className={`${inputClasses('message')} resize-none`}
@@ -161,7 +186,9 @@ export function Contact() {
 								</div>
 
 								<div className="mt-6 md:mt-8">
-									<button className="w-full sm:w-auto h-[56px] md:h-[64px] px-8 md:px-12 bg-white text-primary-black font-bold tracking-widest uppercase text-xs md:text-sm rounded-xl hover:bg-primary-blue hover:text-white transition-all duration-500 flex items-center justify-center gap-3 md:gap-4 group shadow-premium-hover">
+									<button
+										type="submit"
+										className="w-full sm:w-auto h-[56px] md:h-[64px] px-8 md:px-12 bg-white text-primary-black font-bold tracking-widest uppercase text-xs md:text-sm rounded-xl hover:bg-primary-blue hover:text-white transition-all duration-500 flex items-center justify-center gap-3 md:gap-4 group shadow-premium-hover">
 										{t('contact.submitButton')}
 										<ArrowRight
 											className="group-hover:translate-x-2 transition-transform duration-300"
@@ -185,7 +212,7 @@ export function Contact() {
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
-									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.hqLabel')}</span>
+									<span className="font-mono text-[12px] md:text-xs uppercase tracking-widest">{t('contact.hqLabel')}</span>
 								</div>
 								<p className="text-xl md:text-2xl font-light leading-snug">
 									{t('contact.hqAddress1')}
@@ -203,7 +230,7 @@ export function Contact() {
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
-									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.emailLabel')}</span>
+									<span className="font-mono text-[12px] md:text-xs uppercase tracking-widest">{t('contact.emailLabel')}</span>
 								</div>
 								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300 break-all">{t('contact.emailAddress')}</p>
 							</div>
@@ -214,7 +241,7 @@ export function Contact() {
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
-									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.phoneLabel')}</span>
+									<span className="font-mono text-[12px] md:text-xs uppercase tracking-widest">{t('contact.phoneLabel')}</span>
 								</div>
 								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumber')}</p>
 								<p className="text-xl md:text-2xl font-light text-white hover:text-primary-blue transition-colors duration-300">{t('contact.phoneNumberAlt')}</p>
@@ -227,7 +254,7 @@ export function Contact() {
 										size={18}
 										className="md:w-5 md:h-5"
 									/>
-									<span className="font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.coverageLabel')}</span>
+									<span className="font-mono text-[12px] md:text-xs uppercase tracking-widest">{t('contact.coverageLabel')}</span>
 								</div>
 								<p className="text-base md:text-lg font-mono text-white/60">
 									{t('contact.coverageLine1')}
@@ -266,7 +293,7 @@ export function Contact() {
 					</motion.div>
 
 					<div className="absolute top-1/2 left-1/2 translate-x-4 md:translate-x-6 -translate-y-1/2 bg-[#0A0A0A]/80 backdrop-blur-md border border-white/10 p-4 md:p-6 rounded-xl hidden md:flex flex-col gap-2">
-						<span className="font-mono text-[10px] md:text-xs text-primary-blue uppercase tracking-widest">{t('contact.mapHubName')}</span>
+						<span className="font-mono text-[12px] md:text-xs text-primary-blue uppercase tracking-widest">{t('contact.mapHubName')}</span>
 						<span className="text-white text-xs md:text-sm font-medium">{t('contact.mapCoordinates')}</span>
 					</div>
 				</div>
@@ -277,7 +304,7 @@ export function Contact() {
 				<div className="container-enterprise text-center flex flex-col items-center px-6 md:px-0">
 					<div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-1.5 md:py-2 border border-white/10 rounded-full mb-8 md:mb-12 bg-white/[0.02] backdrop-blur-md">
 						<div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary-blue animate-pulse" />
-						<span className="text-white/70 font-mono text-[10px] md:text-xs uppercase tracking-widest">{t('contact.finalBadge')}</span>
+						<span className="text-white/70 font-mono text-[12px] md:text-xs uppercase tracking-widest">{t('contact.finalBadge')}</span>
 					</div>
 
 					<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading font-black text-white leading-tight tracking-tighter uppercase mb-8 md:mb-12 max-w-4xl">
@@ -285,14 +312,14 @@ export function Contact() {
 						<span className="text-white/50">{t('contact.finalTitle2')}</span>
 					</h2>
 
-					<button className="group relative h-[56px] md:h-[72px] px-8 md:px-16 rounded-full bg-white text-primary-black font-bold tracking-widest uppercase text-[10px] md:text-sm overflow-hidden flex items-center gap-2 md:gap-4 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 transform hover:-translate-y-2">
+					<button className="group relative h-[56px] md:h-[72px] px-8 md:px-16 rounded-full bg-white text-primary-black font-bold tracking-widest uppercase text-[12px] md:text-sm overflow-hidden flex items-center gap-2 md:gap-4 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 transform hover:-translate-y-2">
 						<span className="relative z-10 whitespace-nowrap">{t('contact.finalButton')}</span>
 						<ArrowUpRight
 							size={18}
 							className="relative z-10 hover:rotate-45 hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300"
 						/>
 						<div className="absolute inset-0 bg-primary-blue transform translate-y-full hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
-						<span className="absolute inset-0 flex items-center justify-center gap-2 md:gap-4 text-white transform -translate-y-full hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-20 font-bold tracking-widest uppercase text-[10px] md:text-sm whitespace-nowrap">
+						<span className="absolute inset-0 flex items-center justify-center gap-2 md:gap-4 text-white transform -translate-y-full hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-20 font-bold tracking-widest uppercase text-[12px] md:text-sm whitespace-nowrap">
 							{t('contact.finalButton')}{' '}
 							<ArrowUpRight
 								size={18}

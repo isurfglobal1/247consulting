@@ -50,11 +50,11 @@ export function CareersRoles() {
 
 									<div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12 w-full md:w-auto mt-6 md:mt-0 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
 										<div className="flex flex-col gap-1">
-											<span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">{t('careersRoles.location')}</span>
+											<span className="text-white/40 font-mono text-[12px] uppercase tracking-widest">{t('careersRoles.location')}</span>
 											<span className="text-white text-sm font-medium tracking-wide">{t(role.locationKey)}</span>
 										</div>
 										<div className="flex flex-col gap-1">
-											<span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">{t('careersRoles.type')}</span>
+											<span className="text-white/40 font-mono text-[12px] uppercase tracking-widest">{t('careersRoles.type')}</span>
 											<span className="text-white text-sm font-medium tracking-wide">{t(role.typeKey)}</span>
 										</div>
 

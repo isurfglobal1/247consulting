@@ -58,7 +58,7 @@ export function ServiceProcess() {
                 
                 {/* Content */}
                 <div>
-                  <div className="text-primary-blue/60 text-[10px] font-mono tracking-widest uppercase mb-2">
+                  <div className="text-primary-blue/60 text-[12px] font-mono tracking-widest uppercase mb-2">
                     {step.num}
                   </div>
                   <h3 className="text-white text-xl font-bold font-heading mb-3">{step.title}</h3>

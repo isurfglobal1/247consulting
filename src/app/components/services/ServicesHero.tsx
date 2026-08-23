@@ -49,7 +49,7 @@ export function ServicesHero() {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
 						className="lg:col-span-9 order-1 lg:order-2 mb-12 lg:mb-0">
-						<h1 className="font-heading font-black text-[clamp(3.5rem,8vw,9rem)] leading-[0.85] tracking-tighter text-primary-black uppercase">
+						<h1 className="font-heading font-black text-[clamp(3.375rem,8vw,8.875rem)] leading-[0.85] tracking-tighter text-primary-black uppercase">
 							{t('servicesHero.workforce')} <br />
 							<span className="flex items-center gap-4">
 								<span className="w-16 md:w-32 h-[8px] md:h-[12px] bg-primary-blue mt-4"></span>

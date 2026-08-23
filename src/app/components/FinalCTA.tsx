@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export function FinalCTA() {
@@ -23,9 +24,11 @@ export function FinalCTA() {
           <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-10 max-w-4xl mx-auto leading-[1.1]">
             {t("finalCta.title", "Command your workforce with unparalleled precision.")}
           </h2>
-          <button className="px-10 py-5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#F05A28]/90 transition-colors shadow-lg text-lg">
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#F05A28]/90 transition-colors shadow-lg text-lg">
             {t("nav.getStarted", "Get Started")}
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

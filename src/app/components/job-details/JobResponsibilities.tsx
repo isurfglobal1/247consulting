@@ -6,7 +6,7 @@ export function JobResponsibilities({ job }: { job: any }) {
       <div className="container-enterprise">
         
         <div className="mb-20">
-          <h2 className="text-4xl md:text-[56px] font-heading font-black text-white leading-none tracking-tighter uppercase">
+          <h2 className="text-4xl md:text-[54px] font-heading font-black text-white leading-none tracking-tighter uppercase">
             OPERATIONAL <br /> <span className="text-white/30">SCOPE.</span>
           </h2>
         </div>
@@ -24,7 +24,7 @@ export function JobResponsibilities({ job }: { job: any }) {
               <div className="text-white/20 font-mono text-2xl font-light w-12 shrink-0 group-hover:text-primary-blue transition-colors duration-300">
                 0{idx + 1}
               </div>
-              <p className="text-[18px] md:text-2xl text-white/80 font-light leading-relaxed tracking-tight group-hover:text-white transition-colors duration-300">
+              <p className="text-[16px] md:text-2xl text-white/80 font-light leading-relaxed tracking-tight group-hover:text-white transition-colors duration-300">
                 {req}
               </p>
             </motion.div>

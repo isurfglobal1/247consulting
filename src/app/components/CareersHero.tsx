@@ -133,7 +133,7 @@ export function CareersHero() {
 								initial={{ opacity: 0, y: 50 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-								className="font-heading font-black text-white text-[clamp(4rem,8vw,8rem)] leading-[0.85] tracking-tighter">
+								className="font-heading font-black text-white text-[clamp(3.875rem,8vw,7.875rem)] leading-[0.85] tracking-tighter">
 								{t('careersHero.titleLine1')} <br />
 								<span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40">{t('careersHero.titleLine2')}</span>
 							</motion.h1>
@@ -155,7 +155,7 @@ export function CareersHero() {
 								initial={{ opacity: 0, y: 50 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-								className="font-heading font-black text-white/90 text-[clamp(4rem,8vw,8rem)] leading-[0.85] tracking-tighter mt-4">
+								className="font-heading font-black text-white/90 text-[clamp(3.875rem,8vw,7.875rem)] leading-[0.85] tracking-tighter mt-4">
 								{t('careersHero.titleLine3')}
 							</motion.h1>
 						</div>
@@ -180,7 +180,7 @@ export function CareersHero() {
 									initial={{ opacity: 0, y: 50 }}
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-									className="font-heading font-black text-black text-[clamp(4rem,8vw,8rem)] leading-[0.85] tracking-tighter">
+									className="font-heading font-black text-black text-[clamp(3.875rem,8vw,7.875rem)] leading-[0.85] tracking-tighter">
 									{t('careersHero.titleLine1')} <br />
 									<span className="text-whites">{t('careersHero.titleLine2')}</span>
 								</motion.h1>
@@ -189,7 +189,7 @@ export function CareersHero() {
 									initial={{ opacity: 0, y: 50 }}
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-									className="font-heading font-black text-black text-[clamp(4rem,8vw,8rem)] leading-[0.85] tracking-tighter mt-4">
+									className="font-heading font-black text-black text-[clamp(3.875rem,8vw,7.875rem)] leading-[0.85] tracking-tighter mt-4">
 									{t('careersHero.titleLine3')}
 								</motion.h1>
 							</div>

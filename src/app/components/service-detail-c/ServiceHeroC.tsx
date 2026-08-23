@@ -48,7 +48,7 @@ export function ServiceHeroC() {
                 transition={{ duration: 1.2, delay: 0.1 * idx, ease: [0.16, 1, 0.3, 1] }}
                 className="overflow-hidden"
               >
-                <span className={`block text-[clamp(3.5rem,7vw,7rem)] ${idx === words.length - 1 ? 'text-white/40' : 'text-white'}`}>
+                <span className={`block text-[clamp(3.375rem,7vw,6.875rem)] ${idx === words.length - 1 ? 'text-white/40' : 'text-white'}`}>
                   {word}
                 </span>
               </motion.div>

@@ -19,7 +19,7 @@ export function JobStory({ job }: { job: any }) {
               Strategic Mandate
             </div>
             
-            <h2 className="text-3xl md:text-[44px] font-heading font-black text-white leading-[1.1] tracking-tighter">
+            <h2 className="text-3xl md:text-[42px] font-heading font-black text-white leading-[1.1] tracking-tighter">
               {job.storyHeading} <br />
               <span className="text-white/40">{job.storySubheading}</span>
             </h2>
@@ -32,10 +32,10 @@ export function JobStory({ job }: { job: any }) {
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col gap-12"
           >
-            <p className="text-[18px] text-white/80 leading-relaxed font-light">
+            <p className="text-[16px] text-white/80 leading-relaxed font-light">
               {job.storyParagraph1}
             </p>
-            <p className="text-[18px] text-white/60 leading-relaxed font-light">
+            <p className="text-[16px] text-white/60 leading-relaxed font-light">
               {job.storyParagraph2}
             </p>
 

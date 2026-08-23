@@ -63,7 +63,7 @@ export function Testimonials() {
 									</div>
 									<div>
 										<div className="text-white text-sm font-bold">{t('testimonials.name1')}</div>
-										<div className="text-white/40 text-[10px] uppercase">{t('testimonials.role1')}</div>
+										<div className="text-white/40 text-[12px] uppercase">{t('testimonials.role1')}</div>
 									</div>
 								</div>
 							</motion.div>
@@ -85,7 +85,7 @@ export function Testimonials() {
 									</div>
 									<div>
 										<div className="text-white text-sm font-bold">{t('testimonials.name2')}</div>
-										<div className="text-white/40 text-[10px] uppercase">{t('testimonials.role2')}</div>
+										<div className="text-white/40 text-[12px] uppercase">{t('testimonials.role2')}</div>
 									</div>
 								</div>
 							</motion.div>
@@ -107,7 +107,7 @@ export function Testimonials() {
 									</div>
 									<div>
 										<div className="text-white text-sm font-bold">{t('testimonials.name3')}</div>
-										<div className="text-white/40 text-[10px] uppercase">{t('testimonials.role3')}</div>
+										<div className="text-white/40 text-[12px] uppercase">{t('testimonials.role3')}</div>
 									</div>
 								</div>
 							</motion.div>

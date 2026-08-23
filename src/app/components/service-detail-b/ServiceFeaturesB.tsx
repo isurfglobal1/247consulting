@@ -18,7 +18,7 @@ export function ServiceFeaturesB() {
       <div className="container-enterprise">
         
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-24 gap-8">
-          <h2 className="text-[clamp(2.5rem,5vw,5rem)] font-heading font-black text-[#0A0A0A] tracking-tighter leading-[0.9] uppercase max-w-2xl">
+          <h2 className="text-[clamp(2.375rem,5vw,4.875rem)] font-heading font-black text-[#0A0A0A] tracking-tighter leading-[0.9] uppercase max-w-2xl">
             Structural <br/> Components
           </h2>
           <div className="text-[#4B5563] text-sm max-w-xs leading-relaxed">

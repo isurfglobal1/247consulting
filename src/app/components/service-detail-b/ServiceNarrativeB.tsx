@@ -26,7 +26,7 @@ export function ServiceNarrativeB() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[clamp(2rem,4vw,3.5rem)] font-heading font-medium tracking-tight text-[#0A0A0A] leading-[1.1]"
+            className="text-[clamp(1.875rem,4vw,3.375rem)] font-heading font-medium tracking-tight text-[#0A0A0A] leading-[1.1]"
           >
             "Scale is meaningless without <span className="text-[#4B5563] italic">structural certainty</span>. We replace operational friction with architectural silence."
           </motion.h2>
@@ -53,7 +53,7 @@ export function ServiceNarrativeB() {
               style={{ y: y2 }} 
               className="absolute -bottom-16 -right-8 w-1/2 aspect-square bg-white shadow-2xl p-6 hidden md:flex flex-col justify-between z-20"
             >
-              <div className="text-[#1D9BF0] font-mono text-[10px] uppercase tracking-widest">Data point</div>
+              <div className="text-[#1D9BF0] font-mono text-[12px] uppercase tracking-widest">Data point</div>
               <div className="text-3xl font-heading font-black text-[#0A0A0A]">100%</div>
               <div className="text-xs text-[#4B5563] font-medium uppercase tracking-wide">Verification Accuracy</div>
             </motion.div>

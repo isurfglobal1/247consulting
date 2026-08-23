@@ -69,8 +69,10 @@ export function AboutTeam() {
 								{/* Subtle Overlay */}
 								<div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent opacity-80 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none"></div>
 
-								<a
-									href="#"
+							<a
+								href="https://www.linkedin.com/company/247hr"
+								target="_blank"
+								rel="noopener noreferrer"
 									className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 border border-white/20 hover:bg-primary-blue hover:border-primary-blue">
 									<Linkedin size={16} />
 								</a>

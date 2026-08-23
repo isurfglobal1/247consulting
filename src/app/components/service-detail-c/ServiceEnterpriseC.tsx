@@ -54,7 +54,7 @@ export function ServiceEnterpriseC() {
                 transition={{ duration: 1, delay: idx * 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center"
               >
-                <div className="text-[clamp(4rem,8vw,8rem)] font-heading font-black text-white leading-none tracking-tighter mb-4 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                <div className="text-[clamp(3.875rem,8vw,7.875rem)] font-heading font-black text-white leading-none tracking-tighter mb-4 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                   {stat.num}
                 </div>
                 <div className="text-white/40 font-mono text-sm tracking-[0.2em] uppercase">

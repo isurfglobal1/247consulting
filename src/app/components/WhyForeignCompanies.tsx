@@ -21,7 +21,7 @@ export function WhyForeignCompanies() {
 					<span className="text-primary-blue font-bold tracking-[0.2em] uppercase text-xs mb-6 flex items-center gap-4">
 						<span className="w-12 h-px bg-primary-blue"></span> {t('why.tag', 'Strategic Advantage')}
 					</span>
-					<h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] tracking-tight text-white mb-8">
+					<h2 className="font-heading font-black text-[clamp(2.375rem,5vw,4.375rem)] leading-[1.05] tracking-tight text-white mb-8">
 						{t('why.title1', 'Why Foreign Companies')} <br /> {t('why.title2', 'Choose')}{' '}
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-blue-400">247HR?</span>
 					</h2>

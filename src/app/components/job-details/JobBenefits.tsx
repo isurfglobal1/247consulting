@@ -25,7 +25,7 @@ export function JobBenefits() {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl md:text-[44px] font-heading font-black text-white leading-[1.1] tracking-tighter uppercase mb-12">
+            <h2 className="text-3xl md:text-[42px] font-heading font-black text-white leading-[1.1] tracking-tighter uppercase mb-12">
               THE <br /> <span className="text-white/30">LIFESTYLE RETURN.</span>
             </h2>
             
@@ -40,12 +40,12 @@ export function JobBenefits() {
                   className="flex items-center gap-6"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-primary-blue shadow-[0_0_10px_rgba(29,155,240,0.8)]" />
-                  <span className="text-[18px] md:text-xl text-white/80 font-light tracking-wide">{benefit}</span>
+                  <span className="text-[16px] md:text-xl text-white/80 font-light tracking-wide">{benefit}</span>
                 </motion.div>
               ))}
             </div>
 
-            <p className="text-white/50 text-[18px] font-light mt-12 leading-relaxed max-w-md">
+            <p className="text-white/50 text-[16px] font-light mt-12 leading-relaxed max-w-md">
               We understand that elite talent requires an ecosystem that supports holistic optimization. The benefits package is designed to remove friction from your personal and professional life.
             </p>
           </div>

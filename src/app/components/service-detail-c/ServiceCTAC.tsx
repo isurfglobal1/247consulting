@@ -32,7 +32,7 @@ export function ServiceCTAC() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-px bg-white/10 -z-0"></div>
           </div>
 
-          <h2 className="text-[clamp(3rem,8vw,9rem)] font-heading font-black text-white leading-[0.85] tracking-tighter uppercase mb-16 flex flex-col items-center">
+          <h2 className="text-[clamp(2.875rem,8vw,8.875rem)] font-heading font-black text-white leading-[0.85] tracking-tighter uppercase mb-16 flex flex-col items-center">
             {lines.map((line, i) => (
               <span key={i} className="block relative z-10">
                 {line}

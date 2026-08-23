@@ -2,9 +2,18 @@ import { ArrowUpRight, Linkedin, Mail, Twitter } from 'lucide-react';
 import { Link } from 'react-router';
 
 import { useLanguage } from '../contexts/LanguageContext';
+import { sendAsEmail } from '../utils/mailto';
 
 export function Footer() {
 	const { t } = useLanguage();
+
+	const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const email = new FormData(e.currentTarget).get('email');
+		sendAsEmail('Newsletter Signup', { Email: String(email || '') });
+		e.currentTarget.reset();
+	};
+
 	return (
 		<footer className="bg-[#0A0A0A] pt-40 pb-12 relative overflow-hidden">
 			{/* Immersive glow */}
@@ -14,7 +23,7 @@ export function Footer() {
 				{/* Top Cinematic CTA */}
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-16 border-b border-white/10 pb-24 mb-24">
 					<div className="lg:col-span-8 flex flex-col">
-						<h2 className="text-4xl md:text-[64px] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+						<h2 className="text-4xl md:text-[62px] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
 							{t('footer.ctaTitle1')} <br />
 							<span className="text-white/30">{t('footer.ctaTitle2')}</span>
 						</h2>
@@ -34,16 +43,22 @@ export function Footer() {
 					<div className="lg:col-span-4 flex flex-col justify-end">
 						<div className="flex flex-col gap-4 border-l border-white/10 pl-8">
 							<p className="text-xl font-light text-white/80">{t('footer.newsletterText')}</p>
-							<div className="relative mt-4">
+							<form
+								className="relative mt-4"
+								onSubmit={handleNewsletterSubmit}>
 								<input
 									type="email"
+									name="email"
+									required
 									placeholder={t('footer.newsletterPlaceholder')}
 									className="w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-white/30 font-light focus:outline-none focus:border-primary-blue transition-colors pr-12"
 								/>
-								<button className="absolute right-0 top-1/2 -translate-y-1/2 text-white/50 hover:text-primary-blue transition-colors">
+								<button
+									type="submit"
+									className="absolute right-0 top-1/2 -translate-y-1/2 text-white/50 hover:text-primary-blue transition-colors">
 									<ArrowUpRight size={24} />
 								</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -61,10 +76,16 @@ export function Footer() {
 						</Link>
 						<p className="text-white/40 text-sm leading-relaxed font-light mb-8 max-w-sm">{t('footer.hqDescription')}</p>
 						<div className="flex gap-4">
-							{[Linkedin, Twitter, Mail].map((Icon, i) => (
+							{[
+								{ Icon: Linkedin, href: 'https://www.linkedin.com/company/247hr', label: 'LinkedIn' },
+								{ Icon: Twitter, href: 'https://twitter.com/247hr', label: 'Twitter' },
+								{ Icon: Mail, href: 'mailto:executive@247hr.com', label: 'Email' },
+							].map(({ Icon, href, label }) => (
 								<a
-									key={i}
-									href="#"
+									key={label}
+									href={href}
+									target="_blank"
+									rel="noopener noreferrer"
 									className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/[0.05] hover:text-primary-blue transition-all duration-300 hover:-translate-y-1">
 									<Icon size={18} />
 								</a>
@@ -78,8 +99,8 @@ export function Footer() {
 							{[
 								{ key: 'footer.aboutBoard', link: '/about' },
 								{ key: 'footer.leadership', link: '/about' },
-								{ key: 'footer.globalNetwork', link: '#' },
-								{ key: 'footer.esgImpact', link: '#' },
+								{ key: 'footer.globalNetwork', link: '/about' },
+								{ key: 'footer.esgImpact', link: '/about' },
 							].map((item) => (
 								<li key={item.key}>
 									<Link
@@ -118,8 +139,8 @@ export function Footer() {
 							{[
 								{ key: 'footer.openRequisitions', link: '/careers' },
 								{ key: 'footer.lifeAt247hr', link: '/careers' },
-								{ key: 'footer.globalLocations', link: '#' },
-								{ key: 'footer.pressMedia', link: '#' },
+								{ key: 'footer.globalLocations', link: '/about' },
+								{ key: 'footer.pressMedia', link: '/contact' },
 							].map((item) => (
 								<li key={item.key}>
 									<Link
@@ -138,17 +159,17 @@ export function Footer() {
 					<p>© 2026 247HR Consulting PLC. {t('footer.rights')}</p>
 					<div className="flex gap-8 mt-4 md:mt-0">
 						<Link
-							to="#"
+							to="/contact"
 							className="hover:text-white transition-colors">
 							{t('footer.privacyProtocol')}
 						</Link>
 						<Link
-							to="#"
+							to="/contact"
 							className="hover:text-white transition-colors">
 							{t('footer.termsOfService')}
 						</Link>
 						<Link
-							to="#"
+							to="/contact"
 							className="hover:text-white transition-colors">
 							{t('footer.cookieArchitecture')}
 						</Link>

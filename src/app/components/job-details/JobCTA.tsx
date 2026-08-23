@@ -27,7 +27,7 @@ export function JobCTA() {
             Executive Search
           </div>
           
-          <h2 className="text-4xl md:text-6xl lg:text-[72px] font-heading font-black text-white leading-[0.9] tracking-tighter mb-16 max-w-4xl uppercase">
+          <h2 className="text-4xl md:text-6xl lg:text-[70px] font-heading font-black text-white leading-[0.9] tracking-tighter mb-16 max-w-4xl uppercase">
             Define The Future Of <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary-blue to-primary-blue/30">Enterprise Operations.</span>
           </h2>
@@ -36,7 +36,7 @@ export function JobCTA() {
             onClick={() => {
               document.getElementById('application-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="group relative overflow-hidden bg-white text-primary-black px-12 py-6 rounded-full font-bold text-[18px] tracking-wide hover:text-white hover:shadow-[0_0_40px_rgba(29,155,240,0.4)] transition-all duration-500 hover:scale-105 flex items-center gap-4"
+            className="group relative overflow-hidden bg-white text-primary-black px-12 py-6 rounded-full font-bold text-[16px] tracking-wide hover:text-white hover:shadow-[0_0_40px_rgba(29,155,240,0.4)] transition-all duration-500 hover:scale-105 flex items-center gap-4"
           >
             <span className="relative z-10">Submit Dossier</span>
             <ArrowUpRight className="relative z-10 group-hover:rotate-45 transition-transform duration-500" size={24} />

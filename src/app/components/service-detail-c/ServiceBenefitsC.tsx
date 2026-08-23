@@ -20,7 +20,7 @@ export function ServiceBenefitsC() {
             className="flex flex-col md:flex-row items-start md:items-baseline gap-8 md:gap-16 border-b border-white/5 pb-16"
           >
             <div className="w-full md:w-1/2">
-              <h3 className="text-[clamp(2.5rem,5vw,5rem)] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase">
+              <h3 className="text-[clamp(2.375rem,5vw,4.875rem)] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase">
                 {benefit.title}
               </h3>
             </div>

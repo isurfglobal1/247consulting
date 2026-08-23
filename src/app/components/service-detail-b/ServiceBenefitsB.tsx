@@ -50,7 +50,7 @@ export function ServiceBenefitsB() {
             {/* Minimalist Overlay */}
             <div className="absolute top-8 left-8 p-4 bg-white shadow-xl flex items-center gap-4 border border-[#E5E7EB]">
               <div className="w-2 h-2 rounded-full bg-[#1D9BF0] animate-pulse"></div>
-              <div className="text-[#0A0A0A] font-mono text-[10px] uppercase tracking-widest">Active Alignment</div>
+              <div className="text-[#0A0A0A] font-mono text-[12px] uppercase tracking-widest">Active Alignment</div>
             </div>
           </motion.div>
 

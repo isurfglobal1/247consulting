@@ -53,7 +53,7 @@ export function ServiceDetailHero() {
 							<span className="w-1.5 h-1.5 rounded-full bg-primary-blue animate-pulse shadow-[0_0_10px_#1D9BF0]"></span>
 						</div>
 
-						<h1 className="font-heading font-black text-[clamp(3.5rem,7vw,8rem)] leading-[0.9] tracking-tighter text-white uppercase mb-8 relative">
+						<h1 className="font-heading font-black text-[clamp(3.375rem,7vw,7.875rem)] leading-[0.9] tracking-tighter text-white uppercase mb-8 relative">
 							<span className="block opacity-40 translate-y-4 filter blur-[2px] pointer-events-none absolute -z-10 text-transparent [-webkit-text-stroke:1px_#1D9BF0]">
 								{t(`services.${serviceId}.hero.word1`, 'WORKFORCE')}
 							</span>
@@ -88,7 +88,7 @@ export function ServiceDetailHero() {
 									/>
 									<span className="text-xs text-white/60 font-mono">{t('serviceDetailHero.talentPoolLabel', 'TALENT_POOL.SYS')}</span>
 								</div>
-								<div className="text-[10px] text-primary-blue uppercase tracking-widest font-bold border border-primary-blue/30 px-2 py-1 rounded">
+								<div className="text-[12px] text-primary-blue uppercase tracking-widest font-bold border border-primary-blue/30 px-2 py-1 rounded">
 									{t('serviceDetailHero.activeStatus', 'Active')}
 								</div>
 							</div>
@@ -131,7 +131,7 @@ export function ServiceDetailHero() {
 								</div>
 								<div>
 									<div className="text-white text-sm font-bold font-mono">{t('serviceDetailHero.vettingProtocolLabel', 'VETTING_PROTOCOL')}</div>
-									<div className="text-[10px] text-white/50 uppercase tracking-widest">{t('serviceDetailHero.executingStatus', 'Executing')}</div>
+									<div className="text-[12px] text-white/50 uppercase tracking-widest">{t('serviceDetailHero.executingStatus', 'Executing')}</div>
 								</div>
 							</div>
 							<div className="grid grid-cols-6 gap-1">

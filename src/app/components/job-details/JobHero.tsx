@@ -36,7 +36,7 @@ export function JobHero({ job }: { job: any }) {
               </span>
             </div>
 
-            <h1 className="text-[56px] md:text-[72px] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase max-w-4xl">
+            <h1 className="text-[54px] md:text-[70px] font-heading font-black text-white leading-[0.9] tracking-tighter uppercase max-w-4xl">
               {job.heroHeading} <br />
               <span className="text-white/40">{job.heroSubheading}</span>
             </h1>
@@ -53,15 +53,15 @@ export function JobHero({ job }: { job: any }) {
             className="lg:col-span-4 flex flex-col gap-8 lg:pl-12 lg:border-l border-white/10"
           >
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">Experience Range</span>
+              <span className="text-white/40 font-mono text-[12px] uppercase tracking-widest">Experience Range</span>
               <span className="text-white text-lg tracking-wide">{job.experience}</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">Compensation Base</span>
+              <span className="text-white/40 font-mono text-[12px] uppercase tracking-widest">Compensation Base</span>
               <span className="text-white text-lg tracking-wide">{job.compensation}</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">Application Window</span>
+              <span className="text-white/40 font-mono text-[12px] uppercase tracking-widest">Application Window</span>
               <span className="text-primary-blue text-lg tracking-wide">{job.window}</span>
             </div>
           </motion.div>

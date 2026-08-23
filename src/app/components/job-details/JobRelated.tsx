@@ -29,7 +29,7 @@ export function JobRelated() {
               className="group cursor-pointer py-10 border-b border-white/10 flex flex-col md:flex-row md:items-center justify-between transition-colors duration-500 hover:bg-white/[0.02] px-4"
             >
               <div className="flex flex-col gap-2">
-                <h3 className="text-2xl md:text-[32px] font-heading font-bold text-white group-hover:text-primary-blue transition-colors duration-300">
+                <h3 className="text-2xl md:text-[30px] font-heading font-bold text-white group-hover:text-primary-blue transition-colors duration-300">
                   {role.title}
                 </h3>
                 <span className="text-white/50 font-mono text-[12px] uppercase tracking-widest">

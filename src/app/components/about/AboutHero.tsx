@@ -30,7 +30,7 @@ export function AboutHero() {
 						<span className="text-white/80 text-sm font-medium tracking-wide">{t('aboutHero.tagline')}</span>
 					</div>
 
-					<h1 className="font-heading font-black text-[clamp(2.5rem,5vw,5rem)] leading-[1.05] tracking-tighter text-white mb-8">
+					<h1 className="font-heading font-black text-[clamp(2.375rem,5vw,4.875rem)] leading-[1.05] tracking-tighter text-white mb-8">
 						{t('aboutHero.title1')} <br />
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-white">{t('aboutHero.title2')}</span> <br />
 						{t('aboutHero.title3')}
@@ -89,7 +89,7 @@ export function AboutHero() {
 								</div>
 								<div>
 									<div className="text-white text-xs font-bold">{t('aboutHero.metric1Title')}</div>
-									<div className="text-green-400 text-[10px]">{t('aboutHero.metric1Value')}</div>
+									<div className="text-green-400 text-[12px]">{t('aboutHero.metric1Value')}</div>
 								</div>
 							</div>
 							<div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
@@ -111,7 +111,7 @@ export function AboutHero() {
 								</div>
 								<div>
 									<div className="text-white text-xs font-bold">{t('aboutHero.metric2Title')}</div>
-									<div className="text-white/50 text-[10px]">{t('aboutHero.metric2Value')}</div>
+									<div className="text-white/50 text-[12px]">{t('aboutHero.metric2Value')}</div>
 								</div>
 							</div>
 							<div className="flex -space-x-2">
@@ -126,7 +126,7 @@ export function AboutHero() {
 										/>
 									</div>
 								))}
-								<div className="w-8 h-8 rounded-full border-2 border-[#111] bg-white/10 flex items-center justify-center text-[10px] text-white font-medium">
+								<div className="w-8 h-8 rounded-full border-2 border-[#111] bg-white/10 flex items-center justify-center text-[12px] text-white font-medium">
 									{t('aboutHero.metric2Extra')}
 								</div>
 							</div>

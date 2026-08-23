@@ -8,9 +8,9 @@ export function Services() {
 	const { t } = useLanguage();
 	return (
 		<section className="relative w-full py-24 bg-[#0A0A0A] overflow-hidden">
-			<div className="container-enterprise relative z-10 space-y-32">
+			<div className="container-enterprise relative z-10 space-y-20 sm:space-y-32">
 				{/* ZigZag 1: Image Left, Text Right */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
 					<motion.div
 						initial={{ opacity: 0, x: -40 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -29,21 +29,15 @@ export function Services() {
 							/>
 
 							{/* Floating Widget */}
-							<div className="absolute bottom-8 right-[-20px] bg-[#151515]/90 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-2xl w-[240px]">
-								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-full bg-orange-500 overflow-hidden">
-										<ImageWithFallback
-											src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwbWFufGVufDF8fHx8MTc3OTk5ODUwMHww&ixlib=rb-4.1.0&q=80&w=1080"
-											alt="Avatar"
-											className="w-full h-full object-cover"
-										/>
-									</div>
-									<div>
-										<div className="text-white text-sm font-bold">Marley Aminoff</div>
-										<div className="text-white/40 text-[10px] uppercase">Compliance Director</div>
+							<div className="absolute bottom-4 sm:bottom-8 right-0 sm:right-[-20px] bg-[#151515]/90 backdrop-blur-xl border border-white/10 p-3 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl w-[200px] sm:w-[240px]">
+								<div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+									<div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs sm:text-sm font-bold shrink-0">MA</div>
+									<div className="min-w-0">
+										<div className="text-white text-xs sm:text-sm font-bold truncate">Marley Aminoff</div>
+										<div className="text-white/40 text-[9px] sm:text-[12px] uppercase">Compliance Director</div>
 									</div>
 								</div>
-								<div className="space-y-2 text-xs">
+								<div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
 									<div className="flex justify-between">
 										<span className="text-white/60">Active Jurisdictions:</span>
 										<span className="text-white">14</span>
@@ -53,9 +47,9 @@ export function Services() {
 										<span className="text-white">100%</span>
 									</div>
 								</div>
-								<div className="mt-4 pt-3 border-t border-white/10">
-									<div className="text-white/40 text-[10px] mb-1">Total Regional Disbursed</div>
-									<div className="text-white font-bold text-lg">Br2.4M</div>
+								<div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/10">
+									<div className="text-white/40 text-[10px] sm:text-[12px] mb-1">Total Regional Disbursed</div>
+									<div className="text-white font-bold text-base sm:text-lg">Br2.4M</div>
 								</div>
 							</div>
 						</div>
@@ -90,7 +84,7 @@ export function Services() {
 				</div>
 
 				{/* ZigZag 2: Text Left, Image Right */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
 					<motion.div
 						initial={{ opacity: 0, x: -40 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -141,38 +135,36 @@ export function Services() {
 						<div className="absolute top-10 right-0 w-[80%] h-[80%] bg-purple-600/20 rounded-bl-[100px] -z-10"></div>
 						<div className="absolute bottom-0 right-10 w-32 h-32 bg-orange-500/20 rounded-tr-[100px] -z-10"></div>
 
-						<div className="relative z-10 bg-[#111] rounded-[24px] border border-white/10 p-6 shadow-2xl">
-							<div className="flex gap-4">
+						<div className="relative z-10 bg-[#111] rounded-[16px] sm:rounded-[24px] border border-white/10 p-4 sm:p-6 shadow-2xl">
+							<div className="flex gap-3 sm:gap-4">
 								{/* Sidebar mockup */}
-								<div className="w-16 space-y-4 pt-2">
+								<div className="w-10 sm:w-16 space-y-3 sm:space-y-4 pt-2">
 									<div className="w-8 h-8 rounded bg-primary-blue/20"></div>
 									<div className="w-8 h-2 rounded bg-white/10"></div>
 									<div className="w-8 h-2 rounded bg-white/10"></div>
 									<div className="w-8 h-2 rounded bg-white/10"></div>
 								</div>
 								{/* Main content mockup */}
-								<div className="flex-1">
-									<div className="flex justify-between items-center mb-6">
-										<div className="text-white text-sm font-bold">Executive Dashboard</div>
+								<div className="flex-1"><div className="flex justify-between items-center mb-4 sm:mb-6">
+											<div className="text-white text-xs sm:text-sm font-bold">Executive Dashboard</div>
 										<div className="flex gap-2">
 											<div className="w-16 h-6 rounded bg-white/5"></div>
 											<div className="w-6 h-6 rounded-full bg-white/10"></div>
 										</div>
 									</div>
-									<div className="grid grid-cols-2 gap-4 mb-6">
-										<div className="bg-white/5 p-4 rounded-xl border border-white/5">
-											<div className="flex items-center gap-2 mb-3">
-												<div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold">ACC</div>
-												<div className="text-white text-xs font-bold">Accra Hub</div>
-											</div>
-											<div className="text-white text-lg font-bold">Br4.2M</div>
-										</div>
-										<div className="bg-white/5 p-4 rounded-xl border border-white/5">
-											<div className="flex items-center gap-2 mb-3">
-												<div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-[10px] font-bold">NBO</div>
-												<div className="text-white text-xs font-bold">Ethiopian Hub</div>
-											</div>
-											<div className="text-white text-lg font-bold">Br8.1M</div>
+									<div className="grid grid-cols-2 gap-2.5 sm:gap-4 mb-4 sm:mb-6"><div className="bg-white/5 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/5">
+													<div className="flex items-center gap-2 mb-2 sm:mb-3">
+														<div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-orange-500 flex items-center justify-center text-[10px] sm:text-[12px] font-bold">ACC</div>
+														<div className="text-white text-[10px] sm:text-xs font-bold">Accra Hub</div>
+													</div>
+													<div className="text-white text-base sm:text-lg font-bold">Br4.2M</div>
+												</div>
+												<div className="bg-white/5 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/5">
+													<div className="flex items-center gap-2 mb-2 sm:mb-3">
+														<div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-purple-500 flex items-center justify-center text-[10px] sm:text-[12px] font-bold">NBO</div>
+														<div className="text-white text-[10px] sm:text-xs font-bold">Ethiopian Hub</div>
+													</div>
+													<div className="text-white text-base sm:text-lg font-bold">Br8.1M</div>
 										</div>
 									</div>
 								</div>
@@ -182,7 +174,7 @@ export function Services() {
 				</div>
 
 				{/* ZigZag 3: Image Left, Text Right */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
 					<motion.div
 						initial={{ opacity: 0, x: -40 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -192,8 +184,8 @@ export function Services() {
 						<div className="absolute top-0 -left-10 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl pointer-events-none"></div>
 
 						{/* Charts Mockup */}
-						<div className="relative z-10 flex gap-6 items-end justify-center">
-							<div className="bg-[#111] p-5 rounded-2xl border border-white/10 shadow-2xl w-[200px] mb-10">
+						<div className="relative z-10 flex gap-4 sm:gap-6 items-end justify-center flex-wrap sm:flex-nowrap">
+							<div className="bg-[#111] p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl w-[160px] sm:w-[200px] mb-6 sm:mb-10">
 								<div className="flex justify-between items-center mb-6">
 									<div className="text-white/50 text-xs font-medium">Operational Efficiency</div>
 									<div className="text-green-400 text-xs flex items-center">
@@ -212,12 +204,12 @@ export function Services() {
 								</div>
 							</div>
 
-							<div className="bg-[#151515] p-6 rounded-2xl border border-white/10 shadow-2xl w-[240px] z-20 -ml-10">
+							<div className="bg-[#151515] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl w-[200px] sm:w-[240px] z-20 sm:-ml-10">
 								<div className="text-white text-sm font-bold mb-6">Capital Disbursement</div>
 								<div className="flex items-end gap-3 h-32 mb-4">
 									<div className="w-8 bg-purple-500/40 rounded-t-md h-[40%]"></div>
 									<div className="w-8 bg-purple-500 rounded-t-md h-[80%] relative">
-										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold py-1 px-2 rounded">Br1.2M</div>
+										<div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[12px] font-bold py-1 px-2 rounded">Br1.2M</div>
 									</div>
 									<div className="w-8 bg-purple-500/60 rounded-t-md h-[60%]"></div>
 									<div className="w-8 bg-purple-500/30 rounded-t-md h-[50%]"></div>
